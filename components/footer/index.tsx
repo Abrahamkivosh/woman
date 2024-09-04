@@ -148,8 +148,12 @@ const Footer = () => {
               mb={2}
               isRequired
               bg="brand.white"
+              color="brand.black"
+              _placeholder={{ color: "brand.black" }}
+              _focus={{ borderColor: "brand.black" }}
+              _hover={{ borderColor: "brand.black" }}
             />
-            <Button type="submit" colorScheme="blue" w="100%">
+            <Button type="submit" colorScheme="green" w="100%">
               Subscribe
             </Button>
           </Box>

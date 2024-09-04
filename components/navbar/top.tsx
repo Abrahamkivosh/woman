@@ -1,5 +1,4 @@
 import { contactsData, marginX, socials } from "@/utils/constants";
-
 import { Box, Flex, Stack, Text } from "@chakra-ui/react";
 import Link from "next/link";
 
@@ -20,10 +19,8 @@ const TopNav = () => {
           align={{ base: "center", sm: "start" }}
         >
           {contactsData.map((item, i) => (
-            <Link href={item.link} key={i}>
+            <Link href={item.link} key={i} aria-label={item.label}>
               <Flex
-                key={i}
-                // display={i == 2 ? { base: "none", lg: "flex" } : "flex"}
                 align="center"
                 gap={1}
                 _hover={{
@@ -32,7 +29,6 @@ const TopNav = () => {
                 }}
               >
                 <Box as={item.icon} color="white" />
-
                 <Text fontSize="md">{item.label}</Text>
               </Flex>
             </Link>
@@ -40,7 +36,12 @@ const TopNav = () => {
         </Flex>
         <Flex align="center" gap={2}>
           {socials.map((item, i) => (
-            <Link href={item.link} key={i} target="_blank">
+            <Link
+              href={item.link}
+              key={i}
+              target="_blank"
+              aria-label={item.name}
+            >
               <Stack
                 p=".3rem"
                 borderRadius="full"
