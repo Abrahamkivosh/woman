@@ -37,10 +37,12 @@ const Footer = () => {
         >
           <Box w="fit-content" p={2}>
             <Image
-              src="/images/logo.png"
+              src="/images/logo.jpg"
               alt={APP_NAME}
               width={200}
               height={200}
+              loading="eager"
+              style={{ width: "auto", height: "auto" }}
             />
           </Box>
           <Text fontWeight="500">

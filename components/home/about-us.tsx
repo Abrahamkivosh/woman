@@ -1,12 +1,19 @@
+import { APP_NAME, MISSION } from "@/config";
 import { marginX } from "@/utils/constants";
-import { Box, Heading, SimpleGrid, Stack, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Heading,
+  SimpleGrid,
+  Stack,
+  Text,
+} from "@chakra-ui/react";
 import Image from "next/image";
-import CHeading from "../common/c-heading";
+import Link from "next/link";
 
 const AboutUs = () => {
   return (
     <Box mt={{ base: "1.5rem", sm: "3rem" }}>
-      <CHeading>About Us</CHeading>
       <SimpleGrid
         marginX={marginX}
         columns={{ base: 1, md: 2 }}
@@ -15,24 +22,6 @@ const AboutUs = () => {
         mt={{ base: "1rem", sm: "1.5rem" }}
         my={{ base: "1rem", sm: "4rem" }}
       >
-        <Stack gap={{ base: 2, sm: 4 }} data-aos="fade-up">
-          <Heading
-            as="h3"
-            fontSize={{ base: "xl", sm: "4xl" }}
-            color="brand.primary"
-          >
-            Clean Start Africa is an award-winning social enterprise.
-          </Heading>
-          <Text fontSize={{ base: "md", sm: "lg" }}>
-            Our mission is to work with women, girls and children impacted by
-            the criminal justice system, to restore dignity and hope for
-            successful reintegration. <br /> We are addressing systemic and
-            socio-economic injustices that lead to the imprisonment of the
-            vulnerable and poor, through advocacy, bridging the capacity gap to
-            mitigate the limited capacity of prisons to rehabilitate and reform
-            inmates.
-          </Text>
-        </Stack>
         <Box
           height={{ base: "20rem", sm: "30rem" }}
           overflow="hidden"
@@ -42,8 +31,8 @@ const AboutUs = () => {
           data-aos="fade-left"
         >
           <Image
-            src="/awards.jpg"
-            alt="Clean Start Africa"
+            src="/images/woman01.jpg"
+            alt={APP_NAME}
             width={500}
             height={500}
             style={{
@@ -53,6 +42,30 @@ const AboutUs = () => {
             }}
           />
         </Box>
+        <Stack gap={{ base: 2, sm: 4 }} data-aos="fade-up">
+          <Heading
+            as="h2"
+            fontSize={{ base: "4xl", sm: "6xl" }}
+            display="flex"
+            flexDir={{ base: "row", sm: "row" }}
+          >
+            <Text color="brand.primary" className="welcomeText">
+              Welcome
+            </Text>
+            <Text pl={4}>to WITIA</Text>
+          </Heading>
+          <Text
+            fontSize={{ base: "md", sm: "lg" }}
+            dangerouslySetInnerHTML={{ __html: MISSION }}
+          />
+          <Box>
+            <Link href="/who-we-are/">
+              <Button colorScheme="blue" variant="outline">
+                Read More ...
+              </Button>
+            </Link>
+          </Box>
+        </Stack>
       </SimpleGrid>
     </Box>
   );

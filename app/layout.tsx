@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     url: url,
   },
   icons: {
-    icon: "/logo.png",
+    icon: "/images/logo.jpg",
   },
   keywords: [],
 };

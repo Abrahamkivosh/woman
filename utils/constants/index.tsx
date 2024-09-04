@@ -67,10 +67,7 @@ export const quickLinks = [
     label: "Who we are",
     link: "/who-we-are/",
   },
-  {
-    label: "Events",
-    link: "/events",
-  },
+
   {
     label: "Latest News",
     link: "/latest-news",
@@ -123,19 +120,9 @@ export const navData: NavType[] = [
       },
     ],
   },
-
   {
-    label: "Media & News",
-    subItems: [
-      {
-        label: "Latest News",
-        link: "/latest-news",
-      },
-      {
-        label: "Events",
-        link: "/events",
-      },
-    ],
+    label: "Events",
+    link: "/events",
   },
   {
     label: "Join Us",
@@ -163,15 +150,64 @@ export const navData: NavType[] = [
     ],
   },
   {
+    label: "News",
+    link: "/news",
+  },
+  {
     label: "Contact Us",
     link: "/contact-us",
   },
 ];
 
-export const partnersData = [
+export const partners = [
   {
-    name: "Chandaria Foundation",
-    logo: "/partners/chandaria-foundation.jpg",
-    link: "",
+    logo: "/partners/microsoft.png",
+    link: "https://www.microsoft.com",
+    title: "Microsoft",
+  },
+  {
+    logo: "/partners/microsoft.png",
+    link: "https://www.google.com",
+    title: "Google",
+  },
+  {
+    logo: "/partners/microsoft.png",
+    link: "https://aws.amazon.com",
+    title: "Amazon Web Services (AWS)",
+  },
+  {
+    logo: "/partners/microsoft.png",
+    link: "https://www.ibm.com",
+    title: "IBM",
+  },
+  {
+    logo: "/partners/microsoft.png",
+    link: "https://www.oracle.com",
+    title: "Oracle",
+  },
+  {
+    logo: "/partners/microsoft.png",
+    link: "https://www.apple.com",
+    title: "Apple",
+  },
+  {
+    logo: "/partners/microsoft.png",
+    link: "https://www.salesforce.com",
+    title: "Salesforce",
+  },
+  {
+    logo: "/partners/microsoft.png",
+    link: "https://www.meta.com",
+    title: "Facebook (Meta)",
+  },
+  {
+    logo: "/partners/microsoft.png",
+    link: "https://www.adobe.com",
+    title: "Adobe",
+  },
+  {
+    logo: "/partners/microsoft.png",
+    link: "https://www.cisco.com",
+    title: "Cisco",
   },
 ];

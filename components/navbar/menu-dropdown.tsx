@@ -12,7 +12,7 @@ import {
   useDisclosure,
 } from "@chakra-ui/react";
 import Link from "next/link";
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 
 interface Props {
   menuItem: {
@@ -118,7 +118,7 @@ const MenuDropdown = ({ menuItem }: Props) => {
               bg="brand.blue"
               transition="all 0.2s ease-in-out"
               _hover={{
-                bg: "brand.black",
+                bg: "brand.primary",
                 color: "brand.white",
               }}
             >
