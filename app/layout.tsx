@@ -1,4 +1,4 @@
-import { AOSAnimate, ScrollToTop, WhatsAppButton } from "@/components/common";
+import { AOSAnimate, ScrollToTop } from "@/components/common";
 import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
 import { BASE_URL as url } from "@/config";
@@ -28,7 +28,7 @@ export default function RootLayout({
 
           <Footer />
           <ScrollToTop />
-          <WhatsAppButton />
+          {/* <WhatsAppButton /> */}
         </Providers>
       </body>
     </html>

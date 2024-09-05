@@ -3,161 +3,135 @@ import { contactsData, marginX, quickLinks, socials } from "@/utils/constants";
 import {
   Box,
   Button,
+  Divider,
   Flex,
   Grid,
   GridItem,
   Heading,
+  HStack,
   Input,
-  Stack,
   Text,
+  VStack,
 } from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
 
 const Footer = () => {
   return (
-    <Box bg="brand.primary" py="3rem">
+    <Box bg="brand.primary" py="3rem" color="brand.white">
       <Grid
         marginX={marginX}
         templateColumns={{
-          base: "repeat(2,1fr)",
-          lg: "repeat(7,1fr)",
+          base: "1fr",
+          md: "repeat(4, 1fr)",
         }}
-        gap={{ base: 7, lg: 6 }}
-        color="brand.white"
+        gap={{ base: 8, md: 6 }}
         px="1rem"
       >
-        <GridItem
-          height="fit-content"
-          colSpan={{ base: 2, md: 3 }}
-          display="flex"
-          flexDir="column"
-          gap={2}
-          justifyContent={{ base: "center", sm: "normal" }}
-        >
-          <Box w="fit-content" p={2}>
+        <GridItem>
+          <VStack align="start" spacing={4}>
             <Image
               src="/images/logo.jpg"
               alt={APP_NAME}
-              width={200}
-              height={200}
+              width={150}
+              height={150}
               loading="eager"
               style={{ width: "auto", height: "auto" }}
             />
-          </Box>
-          <Text fontWeight="500">
-            Our mission is to create a thriving ecosystem that empowers and
-            supports women in Technology & Innovation across Africa. By
-            providing accessible education, fostering entrepreneurship,
-            advocating for gender equality, and building strong networks, we aim
-            to ensure that women are at the forefront of technological
-            advancements and innovation. Through our initiatives, we seek to
-            break down barriers, inspire leadership, and promote sustainable
-            growth, enabling women to make a significant impact in the tech
-            industry and beyond.
-          </Text>
-        </GridItem>
-        <GridItem display="flex" flexDir="column" gap={3}>
-          <Heading as="h3" size="md">
-            Quick Links
-          </Heading>
-          {quickLinks.map((item, i) => (
-            <Link href={item.link} key={i}>
-              <Text
-                key={i}
-                fontWeight="semibold"
-                color="brand.white"
-                fontSize="lg"
-                textDecor="underline"
-                _hover={{
-                  color: "brand.white",
-                }}
-              >
-                {item.label}
-              </Text>
-            </Link>
-          ))}
+            <Text fontWeight="500" fontSize="sm" lineHeight="1.5">
+              Our mission is to create a thriving ecosystem that empowers and
+              supports women in Technology & Innovation across Africa. By
+              providing accessible education, fostering entrepreneurship,
+              advocating for gender equality, and building strong networks, we
+              aim to ensure that women are at the forefront of technological
+              advancements and innovation.
+            </Text>
+          </VStack>
         </GridItem>
 
-        <GridItem
-          display="flex"
-          flexDir="column"
-          gap={4}
-          colSpan={{ base: 2, lg: 1 }}
-        >
-          <Heading as="h3" size="md">
-            Contact Us
-          </Heading>
-          {contactsData.map((item, i) => (
-            <Link href={item.link} key={i} target="_blank">
-              <Flex align="center" fontSize="lg" fontWeight="semibold">
-                <Box as={item.icon} color="brand.white" width={6} height={6} />
-                <Text ml="1rem">{item.label}</Text>
-              </Flex>
-            </Link>
-          ))}
-          <Flex gap={2} wrap="wrap">
-            {socials.map((item, i) => (
-              <Link
-                href={item.link}
-                key={i}
-                target="_blank"
-                data-aos="fade-up"
-                data-aos-anchor-placement="top-bottom"
-                data-aos-delay={i * 200}
-              >
-                <Stack
-                  border="3px solid var(--chakra-colors-brand-primary)"
+        <GridItem>
+          <VStack align="start" spacing={4}>
+            <Heading as="h3" size="md" mb={2}>
+              About Us
+            </Heading>
+            {quickLinks.map((item, i) => (
+              <Link href={item.link} key={i}>
+                <Text
+                  key={i}
+                  fontWeight="semibold"
+                  fontSize="md"
                   _hover={{
-                    bg: "brand.white",
-                    color: "brand.black",
-                    borderColor: "brand.white",
+                    textDecoration: "underline",
                   }}
-                  p={2}
-                  borderRadius="full"
                 >
-                  <Box as={item.icon} boxSize="5" cursor="pointer" />
-                </Stack>
+                  {item.label}
+                </Text>
               </Link>
             ))}
-          </Flex>
+          </VStack>
         </GridItem>
 
-        <GridItem
-          display="flex"
-          flexDir="column"
-          gap={4}
-          colSpan={{ base: 2, lg: 2 }}
-          alignItems="center"
-          p={3}
-          borderRadius="md"
-          h="fit-content"
-        >
-          <Heading as="h3" size="md">
-            Subscribe newsletter
+        <GridItem>
+          <VStack align="start" spacing={4}>
+            <Heading as="h3" size="md" mb={2}>
+              Contact Us
+            </Heading>
+            {contactsData.map((item, i) => (
+              <Link href={item.link} key={i} target="_blank">
+                <HStack align="center" fontSize="md" fontWeight="semibold">
+                  <Box as={item.icon} width={5} height={5} />
+                  <Text ml="1rem">{item.label}</Text>
+                </HStack>
+              </Link>
+            ))}
+            <HStack spacing={3} mt={4}>
+              {socials.map((item, i) => (
+                <Link href={item.link} key={i} target="_blank">
+                  <Box
+                    as={item.icon}
+                    boxSize={8}
+                    p={2}
+                    border="2px solid"
+                    borderColor="brand.white"
+                    borderRadius="full"
+                    _hover={{
+                      bg: "brand.white",
+                      color: "brand.primary",
+                    }}
+                  />
+                </Link>
+              ))}
+            </HStack>
+          </VStack>
+        </GridItem>
+        <GridItem>
+          <Heading as="h3" size="md" mb={2}>
+            Subscribe to our Newsletter
           </Heading>
-          <Text>
-            Subscribe our newsletter to get updates about our services and
-            offers.
-          </Text>
-          <Box>
+          <Text mb={4}>Stay updated on our latest services and offers.</Text>
+          <Flex as="form" w="100%">
             <Input
               type="email"
               placeholder="Enter your email"
               size="md"
-              mb={2}
-              isRequired
+              mr={2}
               bg="brand.white"
               color="brand.black"
-              _placeholder={{ color: "brand.black" }}
-              _focus={{ borderColor: "brand.black" }}
-              _hover={{ borderColor: "brand.black" }}
+              _placeholder={{ color: "gray.500" }}
+              _focus={{ borderColor: "brand.primary" }}
+              _hover={{ borderColor: "brand.primary" }}
             />
-            <Button type="submit" colorScheme="green" w="100%">
+            <Button type="submit" colorScheme="green">
               Subscribe
             </Button>
-          </Box>
+          </Flex>
         </GridItem>
+      </Grid>
+      <Divider borderColor="brand.white" my={{ base: "1rem", sm: "1rem" }} />
+      <Grid templateColumns="1fr" gap={4} px="1rem" marginX={marginX}>
+        <Text textAlign="center" fontSize="sm">
+          &copy; {new Date().getFullYear()} {APP_NAME}. All rights reserved.
+        </Text>
       </Grid>
     </Box>
   );

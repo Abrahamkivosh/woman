@@ -1,6 +1,4 @@
 import { Box, Button, Heading, Stack, Text } from "@chakra-ui/react";
-import Image from "next/image";
-import React from "react";
 
 import Link from "next/link";
 
@@ -8,10 +6,17 @@ import { marginX } from "@/utils/constants";
 
 const NotFound = () => {
   return (
-    <Box>
+    <Box as="section" bg="red.200" width="100%" position="relative" py="3rem">
       <Stack py="3rem" align="center" justify="center" marginX={marginX}>
         <Stack align="center" gap={3}>
-          <Image src="/404.svg" alt="404" width={300} height={300} />
+          <Text
+            fontSize="6xl"
+            fontWeight="bold"
+            color="brand.primary"
+            textAlign="center"
+          >
+            404
+          </Text>
           <Heading>Page Not Found</Heading>
           <Text
             fontSize="lg"
@@ -24,7 +29,7 @@ const NotFound = () => {
           <Button
             bg="brand.primary"
             p="25px 20px"
-            borderRadius="none"
+            borderRadius={10}
             color="brand.white"
             transition="all 0.3s ease-in-out"
             _hover={{
@@ -34,7 +39,7 @@ const NotFound = () => {
             w={{ base: "100%", sm: "fit-content" }}
           >
             {" "}
-            <Link href="/donate">Donate Fund </Link>
+            <Link href="/">Go Home </Link>
           </Button>
         </Stack>
       </Stack>

@@ -28,13 +28,13 @@ const ScrollToTop = () => {
     <IconButton
       pos="fixed"
       bottom={{ base: "1rem", md: "2rem" }}
-      left={{ base: "1rem", md: "2rem" }}
+      right={{ base: "1rem", md: "2rem" }}
       zIndex={999}
       display={visible ? "flex" : "none"}
       border="none"
       aria-label="Scroll to top"
-      color="brand.black"
-      bg="brand.white"
+      color="brand.white"
+      bg="gray.500"
       _hover={{
         bg: "brand.primary",
         color: "brand.white",

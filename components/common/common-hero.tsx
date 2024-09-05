@@ -1,7 +1,6 @@
 import { marginX } from "@/utils/constants";
 import { Box, Flex, Heading, Stack } from "@chakra-ui/react";
 import Link from "next/link";
-import ScrollToBottom from "./scroll-bottom-btn";
 
 interface Props {
   path: string;
@@ -15,9 +14,9 @@ const CommonHero = ({ path, imgUrl, title, h }: Props) => {
     <Box position="relative">
       <Flex
         minH={h || "85vh"}
-        bgImage={imgUrl || "/gender.jpg"}
+        bgImage={imgUrl || "/images/woman01.jpg"}
         bgSize="cover"
-        bgColor="brand.primary"
+        bgColor="rgba(0, 0, 0, 0.5)"
         bgBlendMode="overlay"
         bgPos="center"
         bgRepeat="no-repeat"
@@ -37,7 +36,7 @@ const CommonHero = ({ path, imgUrl, title, h }: Props) => {
         </Stack>
       </Flex>
 
-      <ScrollToBottom />
+      {/* <ScrollToBottom /> */}
     </Box>
   );
 };
