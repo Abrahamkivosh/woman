@@ -44,7 +44,7 @@ const MenuDropdown = ({ menuItem }: Props) => {
         dropdownEl.removeEventListener("mouseleave", onClose);
       }
     };
-  }, []);
+  }, [onClose, onOpen]);
 
   if (!menuItem.subItems) {
     return (
