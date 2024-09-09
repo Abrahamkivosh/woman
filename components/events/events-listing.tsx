@@ -5,7 +5,7 @@ import EventCard from "./event-card";
 const EventsListing = () => {
   return (
     <Stack mx={marginX} my="2rem" gap={8}>
-      <Heading color="brand.primary"> Upcoming Events</Heading>
+      {/* <Heading color="brand.primary"> Upcoming Events</Heading> */}
 
       <SimpleGrid columns={{ base: 1, md: 3 }} spacing={8}>
         {new Array(6).fill(0).map((_, i) => (
@@ -13,7 +13,7 @@ const EventsListing = () => {
         ))}
       </SimpleGrid>
 
-      <Heading color="brand.primary" mt="1.5rem">
+      <Heading color="brand.primary" mt="1.5rem" textAlign={"center"}>
         Past Events
       </Heading>
       <SimpleGrid columns={{ base: 1, md: 3 }} spacing={8}>

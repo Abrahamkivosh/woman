@@ -14,7 +14,7 @@ const page = () => {
       />
       <Stack spacing={6} pt={10}>
         <Heading as="h1" size={"3xl"} textAlign={"center"}>
-          Contact Us Here
+          Get in touch with us
         </Heading>
       </Stack>
 

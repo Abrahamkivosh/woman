@@ -13,18 +13,18 @@ const EventCard = () => {
     >
       <Box>
         <Image
-          src="/event-placeholder.jpg"
+          src="/images/history02.webp"
           alt="event placeholder image"
           width={500}
           height={500}
         />
       </Box>
       <Stack>
-        <Heading as="h3" size="md">
-          Event 1
+        <Heading as="h3" size="md" textAlign={"center"}>
+          Event Name
         </Heading>
 
-        <Text fontWeight="semibold">
+        <Text fontWeight="unset">
           Event 1: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
           do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
           ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
