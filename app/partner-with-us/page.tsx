@@ -32,8 +32,8 @@ const PartnerWithUs = () => {
           <Text fontSize="lg" color="gray.700" mb={8} maxW="3xl" mx="auto">
             Partnering with us provides your organization with the opportunity
             to make a lasting impact. Together, we can empower communities,
-            foster innovation, and create a better future. Let's collaborate to
-            achieve meaningful goals.
+            foster innovation, and create a better future. Let&apos;s
+            collaborate to achieve meaningful goals.
           </Text>
           <Button
             size="lg"

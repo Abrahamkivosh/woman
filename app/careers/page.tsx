@@ -78,10 +78,10 @@ const Careerpage = () => {
                   maxW="2xl"
                   mx="auto"
                 >
-                  Our company is more than just a workplace—it’s a community
-                  where innovation thrives and your ideas matter. We offer a
-                  vibrant work culture with plenty of opportunities for growth
-                  and development.
+                  Our company is more than just a workplace—it&quot;s a
+                  community where innovation thrives and your ideas matter. We
+                  offer a vibrant work culture with plenty of opportunities for
+                  growth and development.
                 </Text>
               </Box>
 
@@ -176,7 +176,8 @@ const Careerpage = () => {
                 1. Review our current job openings.
               </Text>
               <Text fontSize="md" color="gray.200">
-                2. Click on "Apply Now" for the position you're interested in.
+                2. Click on &quot;Apply Now&quot; for the position you&quot;re
+                interested in.
               </Text>
               <Text fontSize="md" color="gray.200">
                 3. Submit your resume and cover letter.
