@@ -71,7 +71,6 @@ const CommunityPage = () => {
             />
           </Box>
         </Flex>
-
         {/* Section 2: Our Core Values */}
         <Box px={{ base: "2rem", lg: "8rem" }} py="6rem">
           <Heading
@@ -85,7 +84,6 @@ const CommunityPage = () => {
             direction={{ base: "column", md: "row" }}
             justify="space-around"
             align="center"
-            spacing={8}
           >
             <VStack spacing={6} flex="1" maxW="300px" textAlign="center">
               <Image src="/images/community.jpg" alt="Collaboration" />
@@ -119,7 +117,52 @@ const CommunityPage = () => {
             </VStack>
           </Flex>
         </Box>
+        {/* Section 3: Two Column Layout */}
+        <Box px={{ base: "2rem", lg: "8rem" }} py="6rem" bg="white">
+          <Flex
+            direction={{ base: "column", md: "row" }}
+            align="center"
+            justify="space-between"
+          >
+            {/* Column 1 */}
+            <Box flex="1" mb={{ base: "4rem", md: "0" }} pr={{ md: "2rem" }}>
+              <Image
+                src="/images/Aledu_Girls__Teacher_Emily_Story_Large.jpg"
+                alt="Our Story"
+                borderRadius="xl"
+                shadow="xl"
+                objectFit="cover"
+              />
+            </Box>
 
+            {/* Column 2 */}
+            <Box flex="1" pl={{ md: "2rem" }}>
+              <Heading
+                fontSize={{ base: "2xl", lg: "3xl" }}
+                mb={4}
+                fontWeight="bold"
+                color="purple.600"
+              >
+                Our Community&apos;s Story
+              </Heading>
+              <Text fontSize="lg" mb={6} color="gray.700">
+                Our community started with a vision to bring people together who
+                shared a passion for collaboration and empowerment. Over the
+                years, we have grown into a thriving network of individuals
+                dedicated to making a positive impact.
+              </Text>
+              <Button
+                bg="purple.600"
+                color="white"
+                size="lg"
+                _hover={{ bg: "purple.400" }}
+                shadow="lg"
+              >
+                Learn More
+              </Button>
+            </Box>
+          </Flex>
+        </Box>
         {/* Section 3: Call to Action */}
         <Box
           bgImage="/images/africa-woman.jpg"

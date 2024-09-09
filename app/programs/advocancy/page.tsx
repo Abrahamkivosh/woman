@@ -29,10 +29,10 @@ const AdvocacyPage = () => {
               Empowering Women Through Advocacy
             </Heading>
             <Text fontSize="lg" color="gray.600">
-              Our advocacy program focuses on promoting women's rights, raising
-              awareness of gender equality issues, and fighting for policy
-              changes that will benefit women in all areas of society. We work
-              with government institutions, businesses, and communities to
+              Our advocacy program focuses on promoting women&apos;s rights,
+              raising awareness of gender equality issues, and fighting for
+              policy changes that will benefit women in all areas of society. We
+              work with government institutions, businesses, and communities to
               create a more inclusive and equitable world.
             </Text>
           </Box>
@@ -97,8 +97,8 @@ const AdvocacyPage = () => {
               Get Involved
             </Heading>
             <Text fontSize="lg" color="gray.600">
-              Join us in advocating for women's rights by participating in our
-              campaigns, attending events, or supporting our work through
+              Join us in advocating for women&apos;s rights by participating in
+              our campaigns, attending events, or supporting our work through
               donations and volunteer opportunities. Together, we can drive
               meaningful change for women and girls across the globe.
             </Text>
