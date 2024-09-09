@@ -211,3 +211,34 @@ export const partners = [
     title: "Cisco",
   },
 ];
+
+export const teamMembers = [
+  {
+    name: "Jane Doe",
+    role: "CEO",
+    imgUrl: "/images/woman01.jpg",
+    description:
+      "Jane is a visionary leader with over 20 years of experience in the tech industry.",
+  },
+  {
+    name: "John Smith",
+    role: "CTO",
+    imgUrl: "/images/woman01.jpg",
+    description:
+      "John oversees our technology and innovation efforts, ensuring we stay ahead in the market.",
+  },
+  {
+    name: "Alice Johnson",
+    role: "Marketing Director",
+    imgUrl: "/images/woman01.jpg",
+    description:
+      "Alice drives our marketing strategy and helps us connect with our audience effectively.",
+  },
+  {
+    name: "Bob Brown",
+    role: "Lead Developer",
+    imgUrl: "/images/woman01.jpg",
+    description:
+      "Bob leads our development team, turning ideas into cutting-edge solutions.",
+  },
+];
