@@ -87,7 +87,7 @@ const TestimonialsSection = () => {
                 {testimonial.name}
               </Text>
               <Text textAlign="center" color={textColor} fontStyle="italic">
-                "{testimonial.testimonial}"
+                &quot; {testimonial.testimonial} &quot;
               </Text>
             </Stack>
           </Box>
