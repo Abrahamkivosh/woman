@@ -7,7 +7,7 @@ const EventsListing = () => {
     <Stack mx={marginX} my="2rem" gap={8}>
       {/* <Heading color="brand.primary"> Upcoming Events</Heading> */}
 
-      <SimpleGrid columns={{ base: 1, md: 3 }} spacing={8}>
+      <SimpleGrid columns={{ base: 2, md: 4 }} spacing={8}>
         {new Array(6).fill(0).map((_, i) => (
           <EventCard key={i} />
         ))}
