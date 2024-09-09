@@ -152,8 +152,13 @@ const OurTeamPage = () => {
                                     transform: "scale(1.1)",
                                   }}
                                 >
+                                  {/* Type assertion using keyof */}
                                   <Icon
-                                    as={socialsIcons[social]}
+                                    as={
+                                      socialsIcons[
+                                        social as keyof typeof socialsIcons
+                                      ]
+                                    } // Explicitly assert that social is a key of socialsIcons
                                     boxSize={5}
                                     color="purple.600"
                                     _hover={{
