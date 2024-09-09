@@ -4,6 +4,7 @@ import { Box, Flex } from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
 import MenuDropdown from "./menu-dropdown";
+import MobileNav from "./mobile-nav";
 
 const MainNav = () => {
   return (
@@ -29,7 +30,7 @@ const MainNav = () => {
       </Flex>
 
       <Box display={{ base: "block", xl: "none" }}>
-        {/* <MobileNav data={navData} /> */}
+        <MobileNav data={navData} />
       </Box>
     </Flex>
   );
