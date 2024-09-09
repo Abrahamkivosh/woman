@@ -16,7 +16,7 @@ export const MISSION = `  Our mission is to work with women, girls and children 
             inmates.`;
 
 export const CMS_URL =
-  process.env.CMS_URL || "https://cleanstart-cms.clouderp.ke";
+  process.env.CMS_URL || "https://admin.womenintechnology.africa";
 export const CMS_ASSETS_URL =
-  process.env.CMS_ASSETS_URL || "https://cleanstart-cms.clouderp.ke/assets";
+  process.env.CMS_ASSETS_URL || "https://admin.womenintechnology.africa/assets";
 export const DIRECTUS_ACCESS_TOKEN = process.env.DIRECTUS_ACCESS_TOKEN!;

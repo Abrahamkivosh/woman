@@ -37,15 +37,39 @@ export default function RootLayout({
 
 export const metadata: Metadata = {
   metadataBase: new URL(url),
-  title: "",
-  description: "",
+  title: "Woman In Technology And Innovation",
+  description:
+    "Empowering women through technology and innovation. Discover how we support and inspire women in the tech industry.",
   openGraph: {
-    title: "",
-    description: "",
+    title: "Woman In Technology And Innovation",
+    description:
+      "Empowering women through technology and innovation. Discover how we support and inspire women in the tech industry.",
     url: url,
+    images: [
+      {
+        url: `${url}/images/logo.svg`,
+        width: 1200,
+        height: 630,
+      },
+    ],
+    siteName: "Woman In Technology And Innovation",
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@Womenintech_af",
+    title: "Woman In Technology And Innovation",
+    description:
+      "Empowering women through technology and innovation. Discover how we support and inspire women in the tech industry.",
+    images: `${url}/images/logo.jpg`,
   },
   icons: {
     icon: "/images/logo.jpg",
   },
-  keywords: [],
+  keywords: [
+    "Women in Technology",
+    "Tech Innovation",
+    "Empowerment",
+    "Technology",
+    "Innovation",
+  ],
 };
