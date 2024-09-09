@@ -1,4 +1,5 @@
 import { CommonHero } from "@/components/common";
+import { EventsListing } from "@/components/events";
 import { Box, Heading, Stack } from "@chakra-ui/react";
 
 const Eventspage = () => {
@@ -19,11 +20,12 @@ const Eventspage = () => {
             bg="gray.50"
           >
             <Heading textAlign="center" mb={8}>
-              Events
+              Upcoming Events
             </Heading>
           </Box>
         </Box>
       </Stack>
+      <EventsListing />
     </>
   );
 };

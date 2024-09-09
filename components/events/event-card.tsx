@@ -6,30 +6,45 @@ const EventCard = () => {
   return (
     <Stack
       gap={3}
-      border="1px solid black"
+      // border="1px solid black"
+      border="1.2px solid"
+      borderColor="blue.400"
       p={2}
       borderRadius="lg"
       pos="relative"
     >
       <Box>
         <Image
-          src="/event-placeholder.jpg"
+          src="/images/history02.webp"
           alt="event placeholder image"
           width={500}
           height={500}
         />
       </Box>
       <Stack>
-        <Heading as="h3" size="md">
-          Event 1
+        <Heading as="h3" size="md" textAlign={"center"}>
+          Event Name
         </Heading>
 
-        <Text fontWeight="semibold">
-          Event 1: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-          do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-          ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat
+        <Text fontWeight="unset" textAlign={"left"}>
+          {`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris`
+            .split(" ")
+            .slice(0, 20)
+            .join(" ")}
         </Text>
+        <Box display="flex" justifyContent={"flex-end"}>
+          <Tag
+            //position it to the right
+
+            w={"fit-content"}
+            textAlign={"center"}
+            color={"brand.black"}
+            bg="blue.100"
+          >
+            Venue: Online
+          </Tag>
+        </Box>
+
         <Button
           bg="brand.black"
           color="brand.white"
