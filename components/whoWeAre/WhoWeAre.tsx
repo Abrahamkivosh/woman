@@ -113,7 +113,7 @@ const HistorySection = () => {
               <Heading fontSize="lg" color="purple.600">
                 {history.title}
               </Heading>
-              <Text>{history.description}</Text>
+              <Text dangerouslySetInnerHTML={{ __html: history.description }} />
             </Stack>
           </Box>
         ))}
@@ -136,8 +136,6 @@ const HistorySection = () => {
               width={800}
               height={800}
               style={{ width: "100%", height: "100%", objectFit: "cover" }}
-              data-aos="fade-up"
-              data-aos-delay="100"
             />
           </Box>
           <Box
@@ -170,16 +168,13 @@ const HistorySection = () => {
         <Heading as="h5" fontSize="2xl" color="purple.400">
           Ready to join us?
         </Heading>
-        <Text>
-          <Text
-            fontSize="lg"
-            fontWeight="bold"
-            data-aos="fade-up"
-            data-aos-delay="100"
-          >
-            Be a part of our journey. Join us as we continue to shape the
-            future.
-          </Text>
+        <Text
+          fontSize="lg"
+          fontWeight="bold"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          Be a part of our journey. Join us as we continue to shape the future.
         </Text>
         <Box>
           <Button
@@ -201,7 +196,7 @@ const HistorySection = () => {
 
 const WhoWeAre = () => {
   return (
-    <Stack>
+    <>
       <Box
         width="100%"
         bg="purple.400"
@@ -226,7 +221,6 @@ const WhoWeAre = () => {
             overflow="hidden"
             borderRadius="xl"
             boxShadow="xl"
-            data-aos-delay="100"
             data-aos="fade-left"
           >
             <Image
@@ -269,13 +263,7 @@ const WhoWeAre = () => {
           display="flex"
           flexDir={{ base: "column", sm: "row" }}
         >
-          <Box
-            fontWeight="bold"
-            fontSize="2rem"
-            width="40%"
-            data-aos="fade-up"
-            data-aos-anchor-placement="bottom-center"
-          >
+          <Box fontWeight="bold" fontSize="2rem" width="40%">
             About The Organization
           </Box>
           <Stack
@@ -283,11 +271,7 @@ const WhoWeAre = () => {
             textAlign="justify"
             width={{ base: "100%", sm: "60%" }}
           >
-            <Text
-              data-aos="fade-up"
-              data-aos-anchor-placement="bottom-center"
-              data-aos-delay="100"
-            >
+            <Text>
               WITIA was founded with a clear vision: to bridge the gender gap in
               the technology sector by equipping women with the skills,
               resources, and opportunities they need to succeed. We believe in
@@ -338,11 +322,7 @@ const WhoWeAre = () => {
               </Box>
             </SimpleGrid>
 
-            <Text
-              data-aos="fade-up"
-              data-aos-anchor-placement="bottom-center"
-              data-aos-delay="200"
-            >
+            <Text>
               Since our inception, we have trained over 5,000 women in
               cutting-edge technologies, ranging from software development to
               data science, cloud computing, and AI. Through partnerships with
@@ -350,12 +330,7 @@ const WhoWeAre = () => {
               women to gain hands-on experience and secure employment in the
               tech industry.
             </Text>
-            <Text
-              data-aos="fade-zoom-in"
-              data-aos-easing="ease-in-back"
-              data-aos-delay="300"
-              data-aos-offset="0"
-            >
+            <Text>
               Our community-driven approach ensures that women not only excel in
               their careers but also give back by mentoring and uplifting other
               women, creating a ripple effect that drives lasting change in
@@ -366,7 +341,7 @@ const WhoWeAre = () => {
       </Box>
 
       <HistorySection />
-    </Stack>
+    </>
   );
 };
 

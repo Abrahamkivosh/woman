@@ -1,7 +1,6 @@
 "use client";
 import { Box } from "@chakra-ui/react";
 import { useRef } from "react";
-import videojs from "video.js";
 import type Player from "video.js/dist/types/player";
 import VideoJS from "../common/video";
 
@@ -28,19 +27,21 @@ const Hero2Video = () => {
 
   const handlePlayerReady = (player: Player) => {
     playerRef.current = player;
-
-    // You can handle player events here, for example:
-    player.on("waiting", () => {
-      videojs.log("player is waiting");
-    });
-
-    player.on("dispose", () => {
-      videojs.log("player will dispose");
-    });
   };
 
   return (
-    <Box as="section">
+    <Box as="section" pos="relative">
+      <Box
+        as="img"
+        src="/images/history01.webp"
+        alt="Video Thumbnail"
+        position="absolute"
+        top="0"
+        left="0"
+        width="100%"
+        height="100%"
+        objectFit="cover"
+      />
       <VideoJS options={videoJsOptions} onReady={handlePlayerReady} />
     </Box>
   );

@@ -4,7 +4,6 @@ import {
   BiBook,
   BiBriefcase,
   BiCrown,
-  BiFlag,
   BiHeadphone,
   BiLeaf,
   BiWifi,
@@ -74,17 +73,17 @@ const HowWeDoIt = () => {
         Encourage and support women in pursuing leadership roles in tech policy and governance.
       `,
     },
-    {
-      icon: BiFlag,
-      title: "Innovation and Research",
-      description: `
-        Support research and development projects led by women in technology.  
+    // {
+    //   icon: BiFlag,
+    //   title: "Innovation and Research",
+    //   description: `
+    //     Support research and development projects led by women in technology.
 
-        Encourage innovation in solving local and global challenges through technology.  
+    //     Encourage innovation in solving local and global challenges through technology.
 
-        Provide platforms for women to showcase their tech innovations and projects.
-      `,
-    },
+    //     Provide platforms for women to showcase their tech innovations and projects.
+    //   `,
+    // },
   ];
 
   const dataAOSDisplay = [
@@ -132,7 +131,7 @@ const HowWeDoIt = () => {
             p={4}
             borderRadius={10}
             _hover={{
-              transform: "scale(1.05)",
+              transform: "scale(1.1)",
               transition: "all 0.3s ease-in-out",
             }}
             bg="white"
@@ -143,7 +142,7 @@ const HowWeDoIt = () => {
           >
             {/* icon */}
             <Stack align="center">
-              <Icon as={how.icon} w={10} h={10} color="primary.800" />
+              <Icon as={how.icon} w={20} h={20} color="primary.800" />
             </Stack>
             <Text
               align="center"

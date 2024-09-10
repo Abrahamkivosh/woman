@@ -114,11 +114,12 @@ const page = () => {
                 p={6}
                 borderRadius="lg"
                 boxShadow="md"
-                data-aos="flip-left"
-                data-aos-easing="ease-out-cubic"
-                data-aos-duration="2000"
+                bgColor={index % 2 === 0 ? "white" : "gray.200"}
+                _hover={{ boxShadow: "lg" }}
+                data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
+                data-aos-dalay={index * 100}
               >
-                <area.icon size={40} color="#805AD5" />
+                <area.icon size={80} color="#805AD5" />
                 <Text mt={4} fontWeight="bold" fontSize="lg">
                   {area.title}
                 </Text>
@@ -140,7 +141,14 @@ const page = () => {
           </Heading>
           <SimpleGrid columns={{ base: 1, md: 3 }} spacing={8}>
             {successStories.map((story, index) => (
-              <Box key={index} bg="white" p={6} borderRadius="lg">
+              <Box
+                key={index}
+                bg="white"
+                p={6}
+                borderRadius="lg"
+                boxShadow="sm"
+                data-aos={index % 2 === 0 ? "fade-right" : "fade-up"}
+              >
                 <Image src={story.image} alt={story.name} borderRadius="lg" />
                 <Text fontWeight="bold" mt={4}>
                   {story.name}
