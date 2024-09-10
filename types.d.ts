@@ -108,3 +108,9 @@ interface GalleryType {
   id: number;
   directus_files_id: string;
 }
+interface ContactUsNotificationInterface {
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+}

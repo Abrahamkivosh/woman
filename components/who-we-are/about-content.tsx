@@ -21,7 +21,7 @@ const AboutContent = () => {
         noCookie={true}
         aspectWidth={640}
         aspectHeight={360}
-        title="Its a Clean Start! Our Impact"
+        title="true"
       />
     </Box>
   );

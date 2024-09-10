@@ -1,20 +1,28 @@
+"use client";
 import { APP_NAME } from "@/config";
 import { contactsData, marginX, quickLinks, socials } from "@/utils/constants";
 import {
   Box,
   Button,
   Divider,
-  Flex,
   Grid,
   GridItem,
   Heading,
   HStack,
   Input,
+  Stack,
   Text,
   VStack,
 } from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
+
+import handleSubscribeNewsLetterAction from "@/actions/handleSubscribeNewsLetterAction";
+import { useToast } from "@chakra-ui/react";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
 
 const Footer = () => {
   return (
@@ -109,22 +117,7 @@ const Footer = () => {
             Subscribe to our Newsletter
           </Heading>
           <Text mb={4}>Stay updated on our latest services and offers.</Text>
-          <Flex as="form" w="100%">
-            <Input
-              type="email"
-              placeholder="Enter your email"
-              size="md"
-              mr={2}
-              bg="brand.white"
-              color="brand.black"
-              _placeholder={{ color: "gray.500" }}
-              _focus={{ borderColor: "brand.primary" }}
-              _hover={{ borderColor: "brand.primary" }}
-            />
-            <Button type="submit" colorScheme="green">
-              Subscribe
-            </Button>
-          </Flex>
+          <Newsletter />
         </GridItem>
       </Grid>
       <Divider borderColor="brand.white" my={{ base: "1rem", sm: "1rem" }} />
@@ -138,3 +131,97 @@ const Footer = () => {
 };
 
 export default Footer;
+
+// Define the type for the form data
+interface FormData {
+  email: string;
+}
+
+// Define the schema for validation
+const schema = z.object({
+  email: z.string().email("Please enter a valid email address"),
+});
+
+export const Newsletter = () => {
+  const [loading, setLoading] = useState(false);
+  const toast = useToast();
+
+  // Use the form with specific FormData typing
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm<FormData>({
+    resolver: zodResolver(schema),
+  });
+
+  // The form submission handler
+  const onSubmit = async (data: FormData) => {
+    setLoading(true);
+    const { email } = data;
+
+    try {
+      // Assuming handleSubscribeNewsLetterAction is an async function that handles subscription
+      const res = await handleSubscribeNewsLetterAction(email);
+      toast({
+        title: "Success",
+        description: res.message,
+        status: "success",
+        duration: 5000,
+        isClosable: true,
+      });
+      reset(); // Reset form after successful submission
+    } catch (error: any) {
+      toast({
+        title: "Error",
+        description: error.message,
+        status: "error",
+        duration: 5000,
+        isClosable: true,
+      });
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  return (
+    <Stack
+      as="form"
+      spacing={4}
+      direction={{ base: "column", md: "row" }}
+      w="100%"
+      onSubmit={handleSubmit(onSubmit)}
+      position="relative"
+      method="post"
+    >
+      <Input
+        type="email"
+        placeholder="Enter your email address"
+        {...register("email")}
+        isInvalid={errors.email ? true : false}
+        position={{ base: "static", md: "relative" }}
+        w={{ base: "100%", md: "70%" }}
+      />
+      <Text
+        color="red.500"
+        position={{ base: "static", md: "absolute" }}
+        bottom="-1.5rem"
+        left="0"
+      >
+        {errors.email?.message}
+      </Text>
+
+      <Button
+        type="submit"
+        isLoading={loading}
+        w={{ base: "100%", md: "30%" }}
+        pos={{ base: "static", md: "absolute" }}
+        bottom="0"
+        right="0"
+      >
+        Subscribe
+      </Button>
+    </Stack>
+  );
+};

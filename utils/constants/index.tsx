@@ -1,4 +1,12 @@
-import { CONTACT_EMAIL } from "@/config";
+import {
+  CONTACT_EMAIL,
+  CONTACT_PHONE,
+  FACEBOOK_LINK,
+  INSTAGRAM_LINK,
+  LINKEDIN_LINK,
+  TWITTER_LINK,
+  YOUTUBE_LINK,
+} from "@/config";
 import {
   FacebookIcon,
   InstagramIcon,
@@ -13,27 +21,27 @@ export const marginX = { base: "3%", sm: "5%", md: "6%", lg: "8%" };
 export const socials = [
   {
     icon: FacebookIcon,
-    link: "https://www.facebook.com/Cleanstartkenya/",
+    link: FACEBOOK_LINK,
     name: "Facebook",
   },
   {
     icon: XIcon,
-    link: "https://twitter.com/CleanStartKenya",
+    link: TWITTER_LINK,
     name: "Twitter",
   },
   {
     icon: InstagramIcon,
-    link: "https://www.instagram.com/cleanstartkenya/",
+    link: INSTAGRAM_LINK,
     name: "Instagram",
   },
   {
     icon: LinkedinIcon,
-    link: "https://www.linkedin.com/company/clean-start-kenya/",
+    link: LINKEDIN_LINK,
     name: "Linkedin",
   },
   {
     icon: YoutubeIcon,
-    link: "https://www.youtube.com/channel/UCn9V4J3CdjrVemjVj4ZINpw",
+    link: YOUTUBE_LINK,
     name: "Youtube",
   },
 ];
@@ -49,9 +57,9 @@ export const contactsData = [
   },
 
   {
-    label: "0707585566",
+    label: CONTACT_PHONE,
     title: " Phone",
-    link: `tel:0707585566`,
+    link: `tel:${CONTACT_PHONE}`,
     icon: TelIcon,
     bg: "brand.white",
     color: "brand.black",

@@ -5,11 +5,11 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "cleanstart-cms.clouderp.ke",
+        hostname: "womenintechnology.africa",
       },
       {
         protocol: "https",
-        hostname: "assets.clouderp.ke",
+        hostname: "womenintechnology.africa",
       },
     ],
   },

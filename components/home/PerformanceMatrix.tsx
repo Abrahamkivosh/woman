@@ -1,3 +1,4 @@
+import { APP_NAME } from "@/config";
 import { marginX } from "@/utils/constants";
 import {
   Box,
@@ -85,7 +86,7 @@ const PerformanceMatrix = () => {
           >
             <Image
               src="/images/woman01.jpg"
-              alt="Clean Start Africa"
+              alt={APP_NAME}
               width={500}
               height={500}
               style={{
