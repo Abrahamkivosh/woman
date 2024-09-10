@@ -15,8 +15,14 @@ import {
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 
-const Careerpage = () => {
-  const jobOpenings = [
+interface JobOpening {
+  title: string;
+  location: string;
+  description: string;
+}
+
+const Careerpage: React.FC = () => {
+  const jobOpenings: JobOpening[] = [
     {
       title: "Software Engineer",
       location: "Remote",
@@ -52,6 +58,7 @@ const Careerpage = () => {
           px={{ base: "2rem", lg: "8rem" }}
           bg="gray.100"
           py="2rem"
+          data-aos="fade-up"
         >
           <Box
             py={{ base: "2rem", lg: "2rem" }}
@@ -63,7 +70,7 @@ const Careerpage = () => {
               alignItems="center"
               justifyContent="center"
             >
-              <Box>
+              <Box data-aos="fade-right">
                 <Heading
                   fontSize={{ base: "3xl", lg: "4xl" }}
                   mb={6}
@@ -78,14 +85,14 @@ const Careerpage = () => {
                   maxW="2xl"
                   mx="auto"
                 >
-                  Our company is more than just a workplace—it&quot;s a
+                  Our company is more than just a workplace—it&apos;s a
                   community where innovation thrives and your ideas matter. We
                   offer a vibrant work culture with plenty of opportunities for
                   growth and development.
                 </Text>
               </Box>
 
-              <Box width="100%" maxH="400px">
+              <Box width="100%" maxH="400px" data-aos="fade-left">
                 <Image
                   src="/images/woman03.webp"
                   alt="Company Culture"
@@ -101,7 +108,7 @@ const Careerpage = () => {
         </Flex>
 
         {/* Job Openings Section */}
-        <Box px={{ base: "2rem", lg: "8rem" }} py="6rem">
+        <Box px={{ base: "2rem", lg: "8rem" }} py="6rem" data-aos="fade-up">
           <Heading
             fontSize={{ base: "3xl", lg: "4xl" }}
             mb={8}
@@ -163,6 +170,9 @@ const Careerpage = () => {
             p={{ base: "4rem", lg: "6rem" }}
             mx="auto"
             maxW="4xl"
+            position="relative"
+            zIndex={1}
+            data-aos="fade-up"
           >
             <Heading fontSize={{ base: "3xl", lg: "4xl" }} mb={6}>
               How to Apply
@@ -176,7 +186,7 @@ const Careerpage = () => {
                 1. Review our current job openings.
               </Text>
               <Text fontSize="md" color="gray.200">
-                2. Click on &quot;Apply Now&quot; for the position you&quot;re
+                2. Click on &quot;Apply Now&quot; for the position you&apos;re
                 interested in.
               </Text>
               <Text fontSize="md" color="gray.200">
@@ -190,7 +200,12 @@ const Careerpage = () => {
         </Box>
 
         {/* Team Members Section */}
-        <Box py="6rem" px={{ base: "2rem", lg: "8rem" }} bg="gray.50">
+        <Box
+          py="6rem"
+          px={{ base: "2rem", lg: "8rem" }}
+          bg="gray.50"
+          data-aos="fade-up"
+        >
           <Heading
             fontSize={{ base: "3xl", lg: "4xl" }}
             mb={8}

@@ -45,8 +45,18 @@ const Footer = () => {
               height={150}
               loading="eager"
               style={{ width: "auto", height: "auto" }}
+              data-aos="flip-left"
+              data-aos-easing="ease-out-cubic"
+              data-aos-duration="2000"
             />
-            <Text fontWeight="500" fontSize="sm" lineHeight="1.5">
+            <Text
+              fontWeight="500"
+              fontSize="sm"
+              lineHeight="1.5"
+              data-aos="fade-up"
+              data-aos-easing="ease-out-cubic"
+              data-aos-duration="2000"
+            >
               Our mission is to create a thriving ecosystem that empowers and
               supports women in Technology & Innovation across Africa. By
               providing accessible education, fostering entrepreneurship,
@@ -71,6 +81,9 @@ const Footer = () => {
                   _hover={{
                     textDecoration: "underline",
                   }}
+                  data-aos="fade-up"
+                  data-aos-easing="ease-out-cubic"
+                  data-aos-duration="2000"
                 >
                   {item.label}
                 </Text>
@@ -85,7 +98,7 @@ const Footer = () => {
               Contact Us
             </Heading>
             {contactsData.map((item, i) => (
-              <Link href={item.link} key={i} target="_blank">
+              <Link href={item.link} key={i} target="_blank" data-aos="fade-up">
                 <HStack align="center" fontSize="md" fontWeight="semibold">
                   <Box as={item.icon} width={5} height={5} />
                   <Text ml="1rem">{item.label}</Text>
@@ -94,7 +107,12 @@ const Footer = () => {
             ))}
             <HStack spacing={3} mt={4}>
               {socials.map((item, i) => (
-                <Link href={item.link} key={i} target="_blank">
+                <Link
+                  href={item.link}
+                  key={i}
+                  target="_blank"
+                  data-aos="fade-up"
+                >
                   <Box
                     as={item.icon}
                     boxSize={8}
@@ -113,10 +131,24 @@ const Footer = () => {
           </VStack>
         </GridItem>
         <GridItem>
-          <Heading as="h3" size="md" mb={2}>
+          <Heading
+            as="h3"
+            size="md"
+            mb={2}
+            data-aos="fade-up"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000"
+          >
             Subscribe to our Newsletter
           </Heading>
-          <Text mb={4}>Stay updated on our latest services and offers.</Text>
+          <Text
+            mb={4}
+            data-aos="fade-up"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000"
+          >
+            Stay updated on our latest services and offers.
+          </Text>
           <Newsletter />
         </GridItem>
       </Grid>
@@ -194,6 +226,8 @@ export const Newsletter = () => {
       onSubmit={handleSubmit(onSubmit)}
       position="relative"
       method="post"
+      data-aos="fade-up"
+      data-aos-anchor-placement="bottom-bottom"
     >
       <Input
         type="email"

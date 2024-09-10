@@ -56,7 +56,7 @@ const page = () => {
           py={{ base: "1.5rem", sm: "2rem" }}
           textAlign="center"
         >
-          <Text fontSize={{ base: "lg", sm: "2xl" }}>
+          <Text fontSize={{ base: "lg", sm: "2xl" }} data-aos="fade-up">
             We are proud to partner with these leading organizations to drive
             innovation and success.
           </Text>
@@ -66,7 +66,12 @@ const page = () => {
         <Box mx={marginX} py={{ base: "2rem", sm: "4rem" }}>
           <SimpleGrid columns={{ base: 2, sm: 3, md: 4 }} spacing={10}>
             {partners.map((partner, index) => (
-              <Link key={index} href={partner.link} isExternal>
+              <Link
+                key={index}
+                href={partner.link}
+                isExternal
+                data-aos="fade-up"
+              >
                 <Flex
                   direction="column"
                   align="center"

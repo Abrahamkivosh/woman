@@ -38,7 +38,11 @@ const page = () => {
           py={{ base: "2rem", sm: "3rem" }}
           textAlign="center"
         >
-          <Text fontSize={{ base: "xl", sm: "2xl" }} fontWeight="bold">
+          <Text
+            fontSize={{ base: "xl", sm: "2xl" }}
+            fontWeight="bold"
+            data-aos="fade-up"
+          >
             Accessible and affordable technology education and training programs
             for women and girls.
           </Text>
@@ -49,7 +53,12 @@ const page = () => {
           <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
             {/* Left Text Content */}
             <Box>
-              <Heading fontSize="3xl" fontWeight="bold" mb={4}>
+              <Heading
+                fontSize="3xl"
+                fontWeight="bold"
+                mb={4}
+                data-aos="fade-right"
+              >
                 Accelerate your education and career with our programs
               </Heading>
               <Text fontSize="lg" mb={6}>
@@ -61,10 +70,34 @@ const page = () => {
                   Programs
                 </Heading>
                 <UnorderedList spacing={3} fontSize="lg">
-                  <ListItem>Technology Education</ListItem>
-                  <ListItem>Professional Development</ListItem>
-                  <ListItem>Leadership Training</ListItem>
-                  <ListItem>Entrepreneurship</ListItem>
+                  <ListItem
+                    data-aos="fade-right"
+                    data-aos-delay="200"
+                    data-aos-duration="1000"
+                  >
+                    Technology Education
+                  </ListItem>
+                  <ListItem
+                    data-aos="fade-right"
+                    data-aos-delay="400"
+                    data-aos-duration="1000"
+                  >
+                    Professional Development
+                  </ListItem>
+                  <ListItem
+                    data-aos="fade-right"
+                    data-aos-delay="600"
+                    data-aos-duration="1000"
+                  >
+                    Leadership Training
+                  </ListItem>
+                  <ListItem
+                    data-aos="fade-right"
+                    data-aos-delay="800"
+                    data-aos-duration="1000"
+                  >
+                    Entrepreneurship
+                  </ListItem>
                 </UnorderedList>
               </Box>
               <Button
@@ -72,6 +105,7 @@ const page = () => {
                 size="lg"
                 mt={8}
                 _hover={{ bg: "purple.600" }}
+                data-aos="fade-up"
               >
                 <Link href="/contact-us">Get Started</Link>
               </Button>
@@ -92,7 +126,7 @@ const page = () => {
           </SimpleGrid>
 
           <Box textAlign="center" py={10} bg="gray.50">
-            <Heading as="h2" fontSize="3rem" mb={6}>
+            <Heading as="h2" fontSize="3rem" mb={6} data-aos="fade-up">
               We Provide a Human-Centered Approach
             </Heading>
 
@@ -107,7 +141,7 @@ const page = () => {
               bg="white"
               px={10}
             >
-              <Box width="40%">
+              <Box width="40%" data-aos="zoom-out-left">
                 <Heading as="h3" fontSize="2xl" fontWeight="semibold" mb={4}>
                   Our Approach
                 </Heading>
@@ -126,6 +160,7 @@ const page = () => {
                   width="100%"
                   height="100%"
                   className="video-player"
+                  data-aos="zoom-out-down"
                 />
               </AspectRatio>
             </Flex>

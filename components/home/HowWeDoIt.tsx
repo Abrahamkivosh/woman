@@ -87,6 +87,17 @@ const HowWeDoIt = () => {
     },
   ];
 
+  const dataAOSDisplay = [
+    "fade-up",
+    "fade-up-right",
+    "fade-up-left",
+    "fade-right",
+    "fade-left",
+    "fade-down",
+    "fade-down-right",
+    "fade-down-left",
+  ];
+
   return (
     <Box mt={{ base: "1.5rem", sm: "3rem" }}>
       <Stack display="flex" flexDir="column" align="center" textAlign="center">
@@ -95,6 +106,7 @@ const HowWeDoIt = () => {
           fontSize={{ base: "2xl", sm: "4xl" }}
           color="black"
           fontWeight={500}
+          data-aos="fade-up"
         >
           How we Do It
         </Text>
@@ -115,7 +127,6 @@ const HowWeDoIt = () => {
           <Stack
             key={index}
             gap={{ base: 2, sm: 4 }}
-            data-aos="fade-up"
             maxW={{ base: "100%", sm: "95%", md: "85%" }}
             mx="auto"
             p={4}
@@ -126,6 +137,9 @@ const HowWeDoIt = () => {
             }}
             bg="white"
             boxShadow="md"
+            // different  data-aos display
+            data-aos-delay={index * 100}
+            data-aos={dataAOSDisplay[index]}
           >
             {/* icon */}
             <Stack align="center">

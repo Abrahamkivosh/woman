@@ -51,10 +51,10 @@ const TopServiceCare = () => {
           display="flex"
           flexDir="row"
         >
-          <Text fontSize="3xl" fontWeight="bold">
+          <Text fontSize="3xl" fontWeight="bold" data-aos="zoom-in">
             What We Believe In
           </Text>
-          <Text fontSize="lg" maxW="800px">
+          <Text fontSize="lg" maxW="800px" data-aos="zoom-up">
             Women In Technology and Innovation Africa (WITIA) mission is to
             create an ecosystem to support and empower women in Technology &
             Innovation across Africa.
@@ -78,6 +78,7 @@ const TopServiceCare = () => {
                     transform: "scale(1.05)",
                     transition: "all 0.3s ease-in-out",
                   }}
+                  data-aos="fade-up"
                 >
                   <Stack align="center">
                     <Icon as={service.icon} w={12} h={12} color="blue.600" />
@@ -102,6 +103,7 @@ const TopServiceCare = () => {
             mb={{ base: "2rem", lg: 0 }}
             pl={{ lg: "2rem" }}
             textAlign="center"
+            data-aos="fade-right"
           >
             <Image
               src="/images/woman01.jpg"

@@ -79,10 +79,20 @@ const HistorySection = () => {
         <Box display="flex" alignItems="center">
           <Icon as={MdTimeline} w={10} h={10} color="purple.400" />
           <Stack ml={4}>
-            <Heading fontSize="lg" color="purple.600">
+            <Heading
+              fontSize="lg"
+              color="purple.600"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
               2010 - Foundation
             </Heading>
-            <Text>
+            <Text
+              data-aos="fade-zoom-in"
+              data-aos-easing="ease-in-back"
+              data-aos-delay="300"
+              data-aos-offset="0"
+            >
               WITIA was founded with the goal of empowering women in tech. Our
               first steps involved small local programs that quickly gained
               national attention.
@@ -91,7 +101,13 @@ const HistorySection = () => {
         </Box>
 
         {histories.map((history, i) => (
-          <Box display="flex" alignItems="center" key={i}>
+          <Box
+            display="flex"
+            alignItems="center"
+            key={i}
+            data-aos="fade-up"
+            data-aos-delay={i * 100}
+          >
             <Icon as={history.icon} w={10} h={10} color="purple.400" />
             <Stack ml={4}>
               <Heading fontSize="lg" color="purple.600">
@@ -120,6 +136,8 @@ const HistorySection = () => {
               width={800}
               height={800}
               style={{ width: "100%", height: "100%", objectFit: "cover" }}
+              data-aos="fade-up"
+              data-aos-delay="100"
             />
           </Box>
           <Box
@@ -134,6 +152,8 @@ const HistorySection = () => {
               width={800}
               height={800}
               style={{ width: "100%", height: "100%", objectFit: "cover" }}
+              data-aos="fade-up"
+              data-aos-delay="100"
             />
           </Box>
         </SimpleGrid>
@@ -151,7 +171,12 @@ const HistorySection = () => {
           Ready to join us?
         </Heading>
         <Text>
-          <Text fontSize="lg" fontWeight="bold">
+          <Text
+            fontSize="lg"
+            fontWeight="bold"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
             Be a part of our journey. Join us as we continue to shape the
             future.
           </Text>
@@ -161,7 +186,10 @@ const HistorySection = () => {
             colorScheme="purple"
             size="lg"
             mt={4}
-            onClick={() => alert("Join Us!")}
+            data-aos="fade-up"
+            data-aos-delay="100"
+            as="a"
+            href="/contact-us"
           >
             Get Started
           </Button>
@@ -225,7 +253,7 @@ const WhoWeAre = () => {
               </Text>
               <Text pl={4}> WITIA</Text>
             </Heading>
-            <Text fontSize={{ base: "md", sm: "lg" }}>
+            <Text fontSize={{ base: "md", sm: "lg" }} data-aos="fade-up-right">
               Women In Technology & Innovation Africa (WITIA) is a dedicated
               platform that empowers women by providing access to technology
               education, mentorship, and resources. Our mission is to work with
@@ -241,7 +269,13 @@ const WhoWeAre = () => {
           display="flex"
           flexDir={{ base: "column", sm: "row" }}
         >
-          <Box fontWeight="bold" fontSize="2rem" width="40%">
+          <Box
+            fontWeight="bold"
+            fontSize="2rem"
+            width="40%"
+            data-aos="fade-up"
+            data-aos-anchor-placement="bottom-center"
+          >
             About The Organization
           </Box>
           <Stack
@@ -249,7 +283,11 @@ const WhoWeAre = () => {
             textAlign="justify"
             width={{ base: "100%", sm: "60%" }}
           >
-            <Text>
+            <Text
+              data-aos="fade-up"
+              data-aos-anchor-placement="bottom-center"
+              data-aos-delay="100"
+            >
               WITIA was founded with a clear vision: to bridge the gender gap in
               the technology sector by equipping women with the skills,
               resources, and opportunities they need to succeed. We believe in
@@ -300,7 +338,11 @@ const WhoWeAre = () => {
               </Box>
             </SimpleGrid>
 
-            <Text>
+            <Text
+              data-aos="fade-up"
+              data-aos-anchor-placement="bottom-center"
+              data-aos-delay="200"
+            >
               Since our inception, we have trained over 5,000 women in
               cutting-edge technologies, ranging from software development to
               data science, cloud computing, and AI. Through partnerships with
@@ -308,7 +350,12 @@ const WhoWeAre = () => {
               women to gain hands-on experience and secure employment in the
               tech industry.
             </Text>
-            <Text>
+            <Text
+              data-aos="fade-zoom-in"
+              data-aos-easing="ease-in-back"
+              data-aos-delay="300"
+              data-aos-offset="0"
+            >
               Our community-driven approach ensures that women not only excel in
               their careers but also give back by mentoring and uplifting other
               women, creating a ripple effect that drives lasting change in

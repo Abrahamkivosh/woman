@@ -1,5 +1,6 @@
 "use client";
 import { CommonHero } from "@/components/common";
+import { getAnimationProps } from "@/utils/animationHelpers";
 import { marginX } from "@/utils/constants";
 import {
   Box,
@@ -11,8 +12,88 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+
+const sections = [
+  {
+    title: "Empowering Women Through Education",
+    description:
+      "Our education and training programs are designed to provide accessible technology education and scholarships. Volunteers play a crucial role in mentoring and guiding participants, ensuring they have the resources and support needed to succeed.",
+    imageUrl: "/images/girlpower.png",
+    imageAlt: "Education and Training",
+  },
+  {
+    title: "Building a Strong Community",
+    description:
+      "By volunteering, you help us build a supportive network of women in technology. Your involvement in organizing events, workshops, and hackathons is vital for fostering collaboration and innovation within our community.",
+    imageUrl: "/images/community.jpg",
+    imageAlt: "Community Building",
+  },
+  {
+    title: "Advancing Technology Access",
+    description:
+      "Your contribution helps ensure that women in underserved communities have access to technology and digital literacy programs. Volunteers assist in distributing tech resources and teaching essential skills, bridging the digital divide.",
+    imageUrl: "/images/woman01.jpg",
+    imageAlt: "Technology Access",
+  },
+];
+interface sectionInterface {
+  title: string;
+  description: string;
+  imageUrl: string;
+  imageAlt: string;
+  index: number;
+}
+
+const Section = ({
+  title,
+  description,
+  imageUrl,
+  imageAlt,
+  index,
+}: sectionInterface) => {
+  const { animation, delay } = getAnimationProps(index);
+  return (
+    <Flex
+      direction={{
+        base: "column",
+        md: index % 2 === 0 ? "row" : "row-reverse",
+      }}
+      align="center"
+      gap={2}
+      data-aos={animation}
+      data-aos-delay={delay}
+    >
+      <VStack spacing={4} flex={1}>
+        <Heading fontSize="2xl" color="brand.primary">
+          {title}
+        </Heading>
+        <Text color="gray.700">{description}</Text>
+      </VStack>
+      <Image
+        src={imageUrl}
+        alt={imageAlt}
+        boxSize={{ base: "full", md: "400px" }}
+        objectFit="cover"
+        borderRadius="md"
+        shadow="md"
+        data-aos={animation}
+        data-aos-delay={delay}
+      />
+    </Flex>
+  );
+};
 
 const BecomeAVolunteerPage = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Animation duration
+      easing: "ease-in-out", // Animation easing function
+    });
+  }, []);
+
   return (
     <>
       {/* Hero Section */}
@@ -21,6 +102,7 @@ const BecomeAVolunteerPage = () => {
         path="programs/volunteer"
         h="40vh"
         imgUrl="/images/woman02.jpg"
+        data-aos="fade-up"
       />
 
       <Stack marginX={marginX} my="2rem" align="center">
@@ -29,11 +111,16 @@ const BecomeAVolunteerPage = () => {
           px={{ base: "1rem", sm: "4rem" }}
           bg="gray.50"
           textAlign="center"
+          data-aos="fade-up"
         >
-          <Heading mb={4} color="brand.primary">
+          <Heading mb={4} color="brand.primary" data-aos="fade-up-right">
             Why Become a Volunteer?
           </Heading>
-          <Text fontSize={{ base: "md", lg: "lg" }} color="gray.700">
+          <Text
+            fontSize={{ base: "md", lg: "lg" }}
+            color="gray.700"
+            data-aos="fade-down-left"
+          >
             Volunteering with us offers a chance to make a tangible difference
             in the lives of women and girls across Africa. By dedicating your
             time and skills, you help drive our mission to promote technology
@@ -48,86 +135,16 @@ const BecomeAVolunteerPage = () => {
           py={{ base: "4rem", sm: "6rem" }}
           px={{ base: "2rem", sm: "4rem" }}
         >
-          {/* Text and Image Section 1 */}
-          <Flex
-            direction={{ base: "column", md: "row" }}
-            align="center"
-            gap={2}
-          >
-            <VStack spacing={4} flex={1}>
-              <Heading fontSize="2xl" color="brand.primary">
-                Empowering Women Through Education
-              </Heading>
-              <Text color="gray.700">
-                Our education and training programs are designed to provide
-                accessible technology education and scholarships. Volunteers
-                play a crucial role in mentoring and guiding participants,
-                ensuring they have the resources and support needed to succeed.
-              </Text>
-            </VStack>
-            <Image
-              src="/images/girlpower.png"
-              alt="Education and Training"
-              boxSize={{ base: "full", md: "400px" }}
-              objectFit="cover"
-              borderRadius="md"
-              shadow="md"
+          {sections.map((section, index) => (
+            <Section
+              key={index}
+              title={section.title}
+              description={section.description}
+              imageUrl={section.imageUrl}
+              imageAlt={section.imageAlt}
+              index={index}
             />
-          </Flex>
-
-          {/* Text and Image Section 2 */}
-          <Flex
-            direction={{ base: "column", md: "row-reverse" }}
-            align="center"
-            gap={2}
-          >
-            <VStack spacing={4} flex={1}>
-              <Heading fontSize="2xl" color="brand.primary">
-                Building a Strong Community
-              </Heading>
-              <Text color="gray.700">
-                By volunteering, you help us build a supportive network of women
-                in technology. Your involvement in organizing events, workshops,
-                and hackathons is vital for fostering collaboration and
-                innovation within our community.
-              </Text>
-            </VStack>
-            <Image
-              src="/images/community.jpg"
-              alt="Community Building"
-              boxSize={{ base: "full", md: "400px" }}
-              objectFit="cover"
-              borderRadius="md"
-              shadow="md"
-            />
-          </Flex>
-
-          {/* Text and Image Section 3 */}
-          <Flex
-            direction={{ base: "column", md: "row" }}
-            align="center"
-            gap={2}
-          >
-            <VStack spacing={4} flex={1}>
-              <Heading fontSize="2xl" color="brand.primary">
-                Advancing Technology Access
-              </Heading>
-              <Text color="gray.700">
-                Your contribution helps ensure that women in underserved
-                communities have access to technology and digital literacy
-                programs. Volunteers assist in distributing tech resources and
-                teaching essential skills, bridging the digital divide.
-              </Text>
-            </VStack>
-            <Image
-              src="/images/woman01.jpg"
-              alt="Technology Access"
-              boxSize={{ base: "full", md: "400px" }}
-              objectFit="cover"
-              borderRadius="md"
-              shadow="md"
-            />
-          </Flex>
+          ))}
         </Stack>
       </Stack>
 
@@ -136,6 +153,7 @@ const BecomeAVolunteerPage = () => {
         textAlign="center"
         py={{ base: "4rem", sm: "6rem" }}
         px={{ base: "2rem", sm: "4rem" }}
+        data-aos="fade-up"
       >
         <Heading fontSize="xl" mb={4} color="brand.primary">
           Ready to Make a Difference?

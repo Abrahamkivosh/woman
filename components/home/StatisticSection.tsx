@@ -7,6 +7,25 @@ import {
   StatNumber,
   Text,
 } from "@chakra-ui/react";
+import { AnimatedCounter } from "../common/animated-counter";
+
+const statistics = [
+  {
+    label: "Projects Completed",
+    number: "150",
+    helpText: "In the last year",
+  },
+  {
+    label: "Satisfied Clients",
+    number: "300",
+    helpText: "Across the globe",
+  },
+  {
+    label: "Awards Won",
+    number: "25",
+    helpText: "In various categories",
+  },
+];
 
 const StatisticSection = () => {
   return (
@@ -45,45 +64,22 @@ const StatisticSection = () => {
           columns={{ base: 1, sm: 2, md: 3 }}
           spacing={{ base: "2rem", sm: "3rem" }}
         >
-          <Stat
-            textAlign="center"
-            color="white"
-            bg="brand.primary"
-            py={3}
-            borderRadius={10}
-          >
-            <StatLabel fontSize="lg">Projects Completed</StatLabel>
-            <StatNumber fontSize="3xl" fontWeight="bold">
-              150+
-            </StatNumber>
-            <StatHelpText>In the last year</StatHelpText>
-          </Stat>
-          <Stat
-            textAlign="center"
-            color="white"
-            bg="brand.primary"
-            py={3}
-            borderRadius={10}
-          >
-            <StatLabel fontSize="lg">Satisfied Clients</StatLabel>
-            <StatNumber fontSize="3xl" fontWeight="bold">
-              300+
-            </StatNumber>
-            <StatHelpText>Across the globe</StatHelpText>
-          </Stat>
-          <Stat
-            textAlign="center"
-            color="white"
-            bg="brand.primary"
-            py={3}
-            borderRadius={10}
-          >
-            <StatLabel fontSize="lg">Awards Won</StatLabel>
-            <StatNumber fontSize="3xl" fontWeight="bold">
-              25
-            </StatNumber>
-            <StatHelpText>In various categories</StatHelpText>
-          </Stat>
+          {statistics.map((stat, index) => (
+            <Stat
+              key={index}
+              textAlign="center"
+              color="white"
+              bg="brand.primary"
+              py={3}
+              borderRadius={10}
+            >
+              <StatLabel fontSize="lg">{stat.label}</StatLabel>
+              <StatNumber fontSize="3xl" fontWeight="bold">
+                <AnimatedCounter from={0} to={parseInt(stat.number)} />
+              </StatNumber>
+              <StatHelpText>{stat.helpText}</StatHelpText>
+            </Stat>
+          ))}
         </SimpleGrid>
       </Box>
     </Box>

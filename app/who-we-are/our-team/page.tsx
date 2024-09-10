@@ -151,6 +151,7 @@ const OurTeamPage = () => {
                                     bg: "purple.600",
                                     transform: "scale(1.1)",
                                   }}
+                                  data-aos="fade-up"
                                 >
                                   {/* Type assertion using keyof */}
                                   <Icon

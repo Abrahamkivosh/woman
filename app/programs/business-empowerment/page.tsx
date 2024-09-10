@@ -9,6 +9,94 @@ import {
   Link,
   Text,
 } from "@chakra-ui/react";
+import AOS from "aos";
+import { useEffect } from "react";
+
+const sectionsData = [
+  {
+    title: "Comprehensive Business Training",
+    description:
+      "We provide tailored business training programs designed to teach women the skills needed to start and manage successful enterprises. This includes marketing, business planning, and financial management.",
+    image: "/images/business-training.jpg",
+    alt: "Business Training",
+  },
+  {
+    title: "Access to Networking and Mentorship",
+    description:
+      "Through our mentorship and networking programs, we connect women with successful entrepreneurs, industry leaders, and other resources that can help accelerate their business growth.",
+    image: "/images/networking-mentorship.webp",
+    alt: "Networking and Mentorship",
+  },
+  {
+    title: "Financial Support and Resources",
+    description:
+      "We help women secure funding through grants, microloans, and partnerships with financial institutions. We also provide guidance on how to manage and grow their businesses sustainably.",
+    image: "/images/financial-support.jpg",
+    alt: "Financial Support",
+  },
+];
+
+const getAOSAnimation = (index: number) => {
+  switch (index % 3) {
+    case 0:
+      return "fade-up";
+    case 1:
+      return "fade-left";
+    case 2:
+      return "fade-right";
+    default:
+      return "fade-up";
+  }
+};
+interface sectionInterface {
+  title: string;
+  description: string;
+  image: string;
+  alt: string;
+  index: number;
+}
+const Section = ({
+  title,
+  description,
+  image,
+  alt,
+  index,
+}: sectionInterface) => {
+  useEffect(() => {
+    AOS.refresh(); // Refresh AOS to apply animations
+  }, []);
+
+  return (
+    <Flex
+      direction={{
+        base: "column",
+        md: index % 2 === 0 ? "row" : "row-reverse",
+      }}
+      align="center"
+      mb={12}
+      data-aos={getAOSAnimation(index)} // Apply AOS animation
+    >
+      <Image
+        src={image}
+        alt={alt}
+        boxSize="50%"
+        objectFit="cover"
+        borderRadius="md"
+        mb={{ base: 4, md: 0 }}
+        mr={{ md: index % 2 === 0 ? 6 : 0 }}
+        ml={{ md: index % 2 === 0 ? 0 : 6 }}
+      />
+      <Box>
+        <Heading fontSize={{ base: "xl", sm: "2xl" }} mb={2}>
+          {title}
+        </Heading>
+        <Text color="gray.700" fontSize="lg">
+          {description}
+        </Text>
+      </Box>
+    </Flex>
+  );
+};
 
 const BusinessEmpowermentPage = () => {
   return (
@@ -58,91 +146,20 @@ const BusinessEmpowermentPage = () => {
 
           <Divider my={8} />
 
-          {/* Section 1 - Training and Support with Image */}
-          <Flex
-            direction={{ base: "column", md: "row" }}
-            align="center"
-            mb={12}
-          >
-            <Image
-              src="/images/business-training.jpg"
-              alt="Business Training"
-              boxSize="50%"
-              objectFit="cover"
-              borderRadius="md"
-              mb={{ base: 4, md: 0 }}
-              mr={{ md: 6 }}
+          {sectionsData.map((section, index) => (
+            <Section
+              key={index}
+              title={section.title}
+              description={section.description}
+              image={section.image}
+              alt={section.alt}
+              index={index}
             />
-            <Box>
-              <Heading fontSize={{ base: "xl", sm: "2xl" }} mb={2}>
-                Comprehensive Business Training
-              </Heading>
-              <Text color="gray.700" fontSize="lg">
-                We provide tailored business training programs designed to teach
-                women the skills needed to start and manage successful
-                enterprises. This includes marketing, business planning, and
-                financial management.
-              </Text>
-            </Box>
-          </Flex>
-
-          {/* Section 2 - Networking and Mentorship with Image */}
-          <Flex
-            direction={{ base: "column-reverse", md: "row" }}
-            align="center"
-            mb={12}
-          >
-            <Box>
-              <Heading fontSize={{ base: "xl", sm: "2xl" }} mb={2}>
-                Access to Networking and Mentorship
-              </Heading>
-              <Text color="gray.700" fontSize="lg">
-                Through our mentorship and networking programs, we connect women
-                with successful entrepreneurs, industry leaders, and other
-                resources that can help accelerate their business growth.
-              </Text>
-            </Box>
-            <Image
-              src="/images/networking-mentorship.webp"
-              alt="Networking and Mentorship"
-              boxSize="50%"
-              objectFit="cover"
-              borderRadius="md"
-              mb={{ base: 4, md: 0 }}
-              ml={{ md: 6 }}
-            />
-          </Flex>
-
-          {/* Section 3 - Financial Support with Image */}
-          <Flex
-            direction={{ base: "column", md: "row" }}
-            align="center"
-            mb={12}
-          >
-            <Image
-              src="/images/financial-support.jpg"
-              alt="Financial Support"
-              boxSize="50%"
-              objectFit="cover"
-              borderRadius="md"
-              mb={{ base: 4, md: 0 }}
-              mr={{ md: 6 }}
-            />
-            <Box>
-              <Heading fontSize={{ base: "xl", sm: "2xl" }} mb={2}>
-                Financial Support and Resources
-              </Heading>
-              <Text color="gray.700" fontSize="lg">
-                We help women secure funding through grants, microloans, and
-                partnerships with financial institutions. We also provide
-                guidance on how to manage and grow their businesses sustainably.
-              </Text>
-            </Box>
-          </Flex>
+          ))}
 
           {/* Learn More Section */}
           <Box textAlign="center" mt={16}>
-            <Heading fontSize="2xl" mb={4} color="purple.600">
+            <Heading fontSize="2xl" mb={4} color="brand.primary">
               Want to Learn More?
             </Heading>
             <Text fontSize="lg" mb={6} color="gray.600">
@@ -150,8 +167,8 @@ const BusinessEmpowermentPage = () => {
               on your business journey.
             </Text>
             <Link
-              href="/resources/business-guides"
-              color="purple.600"
+              href="/news"
+              color="brand.primary"
               fontWeight="bold"
               fontSize="lg"
             >

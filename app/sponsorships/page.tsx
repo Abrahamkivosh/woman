@@ -3,6 +3,84 @@ import { CommonHero } from "@/components/common";
 import { Box, Grid, Heading, Icon, Image, Stack, Text } from "@chakra-ui/react";
 import { FaChartLine, FaDollarSign, FaHandsHelping } from "react-icons/fa";
 
+// Data for the sponsorships images and text
+const sponsorshipsData = [
+  {
+    src: "/images/Aledu_Girls__Teacher_Emily_Story_Large.jpg",
+    alt: "Types of Corporate Sponsorships",
+    title: "Types of Sponsorships",
+    description:
+      "Learn about the different ways corporations can support nonprofits, from year-round involvement to event-specific campaigns.",
+  },
+  {
+    src: "/images/advocacy2.jpg",
+    alt: "Benefits of Corporate Sponsorships",
+    title: "Benefits for Corporations",
+    description:
+      "Discover the many advantages of corporate sponsorships, including increased brand visibility and tax incentives.",
+  },
+];
+
+// Data for sponsorship types
+const sponsorshipTypes = [
+  {
+    title: "Organization Sponsors",
+    description:
+      "These sponsors provide support throughout the year through regular giving, Corporate Social Responsibility (CSR) campaigns, program sponsorships, and more.",
+  },
+  {
+    title: "Fundraising Sponsors",
+    description:
+      "These sponsors support specific events or campaigns with donations, volunteers, auction items, and other forms of support.",
+  },
+];
+
+// Data for securing corporate sponsors
+const securingSponsorsSteps = [
+  {
+    title: "Leverage Your Board Members",
+    description:
+      "Board members often have valuable connections in the business community. Use these connections to build a list of potential sponsors and create a sponsorship packet.",
+  },
+  {
+    title: "Perfect Your Sponsorship Letter",
+    description:
+      "Craft a compelling sponsorship letter that highlights the benefits of the partnership and aligns your nonprofit's mission with the sponsor's interests.",
+  },
+  {
+    title: "Offer Different Incentives",
+    description:
+      "Provide unique benefits to attract sponsors, such as free event tickets or exclusive promotional opportunities.",
+  },
+  {
+    title: "Utilize Personal Connections",
+    description:
+      "Leverage personal networks and social media to find potential sponsors and create a connection to your cause.",
+  },
+];
+
+// Data for sponsorship benefits
+const sponsorshipBenefits = [
+  {
+    icon: FaChartLine,
+    title: "Brand Awareness",
+    description:
+      "Sponsoring a nonprofit can enhance brand visibility and associate your company with a positive cause.",
+  },
+  {
+    icon: FaDollarSign,
+    title: "Financial Incentives",
+    description:
+      "Corporate sponsorships can offer tax benefits and other financial incentives.",
+  },
+  {
+    icon: FaHandsHelping,
+    title: "Enhanced Corporate Reputation",
+    description:
+      "Aligning with a nonprofit can improve your company’s reputation and appeal to socially-conscious consumers and employees.",
+  },
+];
+
 const SponsorshipsPage = () => {
   return (
     <>
@@ -48,75 +126,42 @@ const SponsorshipsPage = () => {
             justifyContent="center"
             mt={12}
           >
-            <Box
-              position="relative"
-              overflow="hidden"
-              borderRadius="lg"
-              boxShadow="xl"
-            >
-              <Image
-                src="/images/Aledu_Girls__Teacher_Emily_Story_Large.jpg"
-                alt="Types of Corporate Sponsorships"
-                objectFit="cover"
-                boxSize="100%"
-                borderRadius="lg"
-                transition="transform 0.3s ease"
-                _hover={{ transform: "scale(1.05)" }}
-              />
+            {sponsorshipsData.map((item, index) => (
               <Box
-                position="absolute"
-                bottom="0"
-                left="0"
-                right="0"
-                bgGradient="linear(to-t, rgba(0,0,0,0.6), rgba(0,0,80,0.4))"
-                color="white"
-                p={4}
+                key={index}
+                position="relative"
+                overflow="hidden"
                 borderRadius="lg"
+                boxShadow="xl"
               >
-                <Text fontSize="lg" fontWeight="bold">
-                  Types of Sponsorships
-                </Text>
-                <Text fontSize="sm" mt={2}>
-                  Learn about the different ways corporations can support
-                  nonprofits, from year-round involvement to event-specific
-                  campaigns.
-                </Text>
+                <Image
+                  src={item.src}
+                  alt={item.alt}
+                  objectFit="cover"
+                  boxSize="100%"
+                  borderRadius="lg"
+                  transition="transform 0.3s ease"
+                  _hover={{ transform: "scale(1.05)" }}
+                />
+                <Box
+                  position="absolute"
+                  bottom="0"
+                  left="0"
+                  right="0"
+                  bgGradient="linear(to-t, rgba(0,0,0,0.6), rgba(0,0,80,0.4))"
+                  color="white"
+                  p={4}
+                  borderRadius="lg"
+                >
+                  <Text fontSize="lg" fontWeight="bold">
+                    {item.title}
+                  </Text>
+                  <Text fontSize="sm" mt={2}>
+                    {item.description}
+                  </Text>
+                </Box>
               </Box>
-            </Box>
-            <Box
-              position="relative"
-              overflow="hidden"
-              borderRadius="lg"
-              boxShadow="xl"
-            >
-              <Image
-                src="/images/advocacy2.jpg"
-                alt="Benefits of Corporate Sponsorships"
-                objectFit="cover"
-                boxSize="100%"
-                borderRadius="lg"
-                transition="transform 0.3s ease"
-                _hover={{ transform: "scale(1.05)" }}
-              />
-              <Box
-                position="absolute"
-                bottom="0"
-                left="0"
-                right="0"
-                bgGradient="linear(to-t, rgba(0,0,0,0.6), rgba(0,0,80,0.4))"
-                color="white"
-                p={4}
-                borderRadius="lg"
-              >
-                <Text fontSize="lg" fontWeight="bold">
-                  Benefits for Corporations
-                </Text>
-                <Text fontSize="sm" mt={2}>
-                  Discover the many advantages of corporate sponsorships,
-                  including increased brand visibility and tax incentives.
-                </Text>
-              </Box>
-            </Box>
+            ))}
           </Grid>
 
           {/* Detailed Information Sections */}
@@ -137,26 +182,14 @@ const SponsorshipsPage = () => {
                   two main types of corporate sponsorships:
                 </Text>
                 <Stack spacing={4} mt={6} ml={6}>
-                  <Box>
-                    <Heading fontSize="lg" color="gray.800">
-                      1. Organization Sponsors
-                    </Heading>
-                    <Text color="gray.600">
-                      These sponsors provide support throughout the year through
-                      regular giving, Corporate Social Responsibility (CSR)
-                      campaigns, program sponsorships, and more.
-                    </Text>
-                  </Box>
-                  <Box>
-                    <Heading fontSize="lg" color="gray.800">
-                      2. Fundraising Sponsors
-                    </Heading>
-                    <Text color="gray.600">
-                      These sponsors support specific events or campaigns with
-                      donations, volunteers, auction items, and other forms of
-                      support.
-                    </Text>
-                  </Box>
+                  {sponsorshipTypes.map((type, index) => (
+                    <Box key={index}>
+                      <Heading fontSize="lg" color="gray.800">
+                        {type.title}
+                      </Heading>
+                      <Text color="gray.600">{type.description}</Text>
+                    </Box>
+                  ))}
                 </Stack>
                 <Text
                   fontSize={{ base: "md", lg: "lg" }}
@@ -185,45 +218,14 @@ const SponsorshipsPage = () => {
                   How to Secure Corporate Sponsors
                 </Heading>
                 <Stack spacing={6} maxW="3xl" mx="auto">
-                  <Box>
-                    <Heading fontSize="lg" color="gray.800">
-                      1. Leverage Your Board Members
-                    </Heading>
-                    <Text color="gray.600">
-                      Board members often have valuable connections in the
-                      business community. Use these connections to build a list
-                      of potential sponsors and create a sponsorship packet.
-                    </Text>
-                  </Box>
-                  <Box>
-                    <Heading fontSize="lg" color="gray.800">
-                      2. Perfect Your Sponsorship Letter
-                    </Heading>
-                    <Text color="gray.600">
-                      Craft a compelling sponsorship letter that highlights the
-                      benefits of the partnership and aligns your
-                      nonprofit&apos;s mission with the sponsor&apos;s
-                      interests.
-                    </Text>
-                  </Box>
-                  <Box>
-                    <Heading fontSize="lg" color="gray.800">
-                      3. Offer Different Incentives
-                    </Heading>
-                    <Text color="gray.600">
-                      Provide unique benefits to attract sponsors, such as free
-                      event tickets or exclusive promotional opportunities.
-                    </Text>
-                  </Box>
-                  <Box>
-                    <Heading fontSize="lg" color="gray.800">
-                      4. Utilize Personal Connections
-                    </Heading>
-                    <Text color="gray.600">
-                      Leverage personal networks and social media to find
-                      potential sponsors and create a connection to your cause.
-                    </Text>
-                  </Box>
+                  {securingSponsorsSteps.map((step, index) => (
+                    <Box key={index}>
+                      <Heading fontSize="lg" color="gray.800">
+                        {step.title}
+                      </Heading>
+                      <Text color="gray.600">{step.description}</Text>
+                    </Box>
+                  ))}
                 </Stack>
               </Box>
 
@@ -236,37 +238,15 @@ const SponsorshipsPage = () => {
                   Benefits of Corporate Sponsorships
                 </Heading>
                 <Stack spacing={6}>
-                  <Box>
-                    <Icon as={FaChartLine} w={8} h={8} color="blue.500" />
-                    <Heading fontSize="lg" color="gray.800">
-                      Brand Awareness
-                    </Heading>
-                    <Text color="gray.600">
-                      Sponsoring a nonprofit can enhance brand visibility and
-                      associate your company with a positive cause.
-                    </Text>
-                  </Box>
-                  <Box>
-                    <Icon as={FaDollarSign} w={8} h={8} color="blue.500" />
-                    <Heading fontSize="lg" color="gray.800">
-                      Financial Incentives
-                    </Heading>
-                    <Text color="gray.600">
-                      Corporate sponsorships can offer tax benefits and other
-                      financial incentives.
-                    </Text>
-                  </Box>
-                  <Box>
-                    <Icon as={FaHandsHelping} w={8} h={8} color="blue.500" />
-                    <Heading fontSize="lg" color="gray.800">
-                      Enhanced Corporate Reputation
-                    </Heading>
-                    <Text color="gray.600">
-                      Aligning with a nonprofit can improve your company’s
-                      reputation and appeal to socially-conscious consumers and
-                      employees.
-                    </Text>
-                  </Box>
+                  {sponsorshipBenefits.map((benefit, index) => (
+                    <Box key={index}>
+                      <Icon as={benefit.icon} w={8} h={8} color="blue.500" />
+                      <Heading fontSize="lg" color="gray.800">
+                        {benefit.title}
+                      </Heading>
+                      <Text color="gray.600">{benefit.description}</Text>
+                    </Box>
+                  ))}
                 </Stack>
               </Box>
             </Stack>

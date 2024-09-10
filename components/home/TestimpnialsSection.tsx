@@ -68,6 +68,9 @@ const TestimonialsSection = () => {
             shadow="lg"
             transition="transform 0.3s ease, box-shadow 0.3s ease"
             _hover={{ transform: "translateY(-10px)", shadow: "2xl" }}
+            data-aos="fade-up"
+            data-aos-easing="linear"
+            data-aos-duration="1500"
           >
             <Stack align="center" spacing={6}>
               <Image

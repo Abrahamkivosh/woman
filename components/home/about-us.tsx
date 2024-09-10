@@ -40,6 +40,7 @@ const AboutUs = () => {
               height: "100%",
               objectFit: "cover",
             }}
+            data-aos="fade-left"
           />
         </Box>
         <Stack gap={{ base: 2, sm: 4 }} data-aos="fade-up">
@@ -48,6 +49,7 @@ const AboutUs = () => {
             fontSize={{ base: "4xl", sm: "6xl" }}
             display="flex"
             flexDir={{ base: "row", sm: "row" }}
+            data-aos="fade-right"
           >
             <Text color="brand.primary" className="welcomeText">
               Welcome
@@ -55,12 +57,17 @@ const AboutUs = () => {
             <Text pl={4}>to WITIA</Text>
           </Heading>
           <Text
+            data-aos="fade-up-right"
             fontSize={{ base: "md", sm: "lg" }}
             dangerouslySetInnerHTML={{ __html: MISSION }}
           />
           <Box>
             <Link href="/who-we-are/">
-              <Button colorScheme="blue" variant="outline">
+              <Button
+                colorScheme="blue"
+                variant="outline"
+                data-aos="fade-up-right"
+              >
                 Read More ...
               </Button>
             </Link>

@@ -21,7 +21,7 @@ const PerformanceMatrix = () => {
         spacing={8}
         alignItems="center"
       >
-        <Stack gap={{ base: 2, sm: 4 }} data-aos="fade-up">
+        <Stack gap={{ base: 2, sm: 4 }} data-aos="fade-right">
           <Heading
             as="h3"
             fontSize={{ base: "xl", sm: "4xl" }}
@@ -31,7 +31,7 @@ const PerformanceMatrix = () => {
             What We Have Managed to Improve
           </Heading>
           <Box mt={4}>
-            {/* Progress bars */}
+            {/* Progress bars with AOS animations */}
             <Text fontSize={{ base: "md", sm: "lg" }} fontWeight="bold">
               Education & Training
             </Text>

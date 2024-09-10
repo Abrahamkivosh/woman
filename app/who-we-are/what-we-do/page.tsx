@@ -83,11 +83,12 @@ const page = () => {
           fontWeight="bold"
           py={{ base: "1.5rem", sm: "2rem" }}
           textAlign="center"
+          data-aos="fade-up"
         >
           <Text fontSize={{ base: "lg", sm: "2xl" }}>
             Empowering Women Through Technology and Innovation
           </Text>
-          <Text fontSize={{ base: "md", sm: "lg" }} mt={2}>
+          <Text fontSize={{ base: "md", sm: "lg" }} mt={2} data-aos="fade-down">
             At WITIA, we are on a mission to bridge the gender gap in technology
             by providing education, mentorship, and career opportunities for
             women across Africa.
@@ -113,6 +114,9 @@ const page = () => {
                 p={6}
                 borderRadius="lg"
                 boxShadow="md"
+                data-aos="flip-left"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="2000"
               >
                 <area.icon size={40} color="#805AD5" />
                 <Text mt={4} fontWeight="bold" fontSize="lg">
