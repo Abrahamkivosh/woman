@@ -19,6 +19,7 @@ const MainNav = () => {
             blurDataURL="/images/logo.jpg"
             priority
             loading="eager"
+            style={{ cursor: "pointer", width: "100%", height: "100%" }}
           />
         </Link>
       </Box>

@@ -28,7 +28,7 @@ const WhatsAppButton = ({
     <FloatingWhatsApp
       accountName={APP_NAME}
       phoneNumber={CONTACT_PHONE}
-      avatar="/images/logo.jpg"
+      avatar="/images/advocacy1.jpg"
       statusMessage={statusMessage}
       chatMessage={chatMessage}
       placeholder={placeholder}

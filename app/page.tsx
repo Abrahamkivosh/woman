@@ -28,7 +28,7 @@ export const metadata = {
     title: "Woman In Technology And Innovation",
     description:
       "Empowering women through technology and innovation. Discover how we support and inspire women in the tech industry.",
-    image: "public/images/logo.jpg",
+    image: "/images/logo.jpg",
   },
 };
 export default async function Home() {

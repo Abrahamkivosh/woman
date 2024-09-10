@@ -13,6 +13,7 @@ import {
   DrawerHeader,
   DrawerOverlay,
   Flex,
+  Icon,
   IconButton,
   Stack,
   useDisclosure,
@@ -40,7 +41,7 @@ const MobileNav = ({ data }: Props) => {
     <Box>
       <IconButton
         aria-label="Open Menu"
-        as={RxHamburgerMenu}
+        icon={<Icon as={RxHamburgerMenu} />}
         onClick={onOpen}
         boxSize={9}
         bg="none"
