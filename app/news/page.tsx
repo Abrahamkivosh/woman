@@ -72,7 +72,7 @@ const NewsPage = () => {
                 alt={newsItem.title}
                 width="100%"
                 height="200px"
-                objectFit="cover"
+                style={{ objectFit: "cover" }}
                 borderRadius="lg 0 0 0"
               />
               <Box p={6} flex="1" display="flex" flexDirection="column">

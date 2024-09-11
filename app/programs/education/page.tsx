@@ -118,7 +118,7 @@ const page = () => {
                 alt="Education Programs"
                 width="100%"
                 height="100%"
-                objectFit="cover"
+                style={{ objectFit: "cover" }}
                 borderRadius="lg"
                 boxShadow="lg"
               />

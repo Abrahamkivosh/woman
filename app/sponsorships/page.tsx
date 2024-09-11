@@ -137,7 +137,7 @@ const SponsorshipsPage = () => {
                 <Image
                   src={item.src}
                   alt={item.alt}
-                  objectFit="cover"
+                  style={{ objectFit: "cover" }}
                   boxSize="100%"
                   borderRadius="lg"
                   transition="transform 0.3s ease"

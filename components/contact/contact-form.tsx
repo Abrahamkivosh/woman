@@ -90,6 +90,8 @@ const ContactForm = () => {
             placeholder="Your name"
             {...register("name")}
             className="custom-input"
+            autoComplete="name"
+            autoFocus
           />
           <Text color="red.500">{errors.name?.message}</Text>
         </FormControl>
@@ -105,6 +107,7 @@ const ContactForm = () => {
             placeholder="Your email"
             {...register("email")}
             className="custom-input"
+            autoComplete="email"
           />
           <Text color="red.500">{errors.email?.message}</Text>
         </FormControl>

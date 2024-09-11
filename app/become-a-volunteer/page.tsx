@@ -76,11 +76,11 @@ const Section = ({
         src={imageUrl}
         alt={imageAlt}
         boxSize={{ base: "full", md: "400px" }}
-        objectFit="cover"
         borderRadius="md"
         shadow="md"
         data-aos={animation}
         data-aos-delay={delay}
+        style={{ flex: 1, objectFit: "cover" }}
       />
     </Flex>
   );

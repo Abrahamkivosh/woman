@@ -98,7 +98,7 @@ const Careerpage: React.FC = () => {
                   alt="Company Culture"
                   borderRadius="lg"
                   shadow="lg"
-                  objectFit="cover"
+                  style={{ objectFit: "cover" }}
                   width="100%"
                   height="auto"
                 />
@@ -236,7 +236,7 @@ const Careerpage: React.FC = () => {
                     alt={member.name}
                     borderRadius="full"
                     boxSize="150px"
-                    objectFit="cover"
+                    style={{ objectFit: "cover" }}
                     mx="auto"
                   />
                   <Heading fontSize="xl" mt={4}>

@@ -236,6 +236,7 @@ export const Newsletter = () => {
         isInvalid={errors.email ? true : false}
         position={{ base: "static", md: "relative" }}
         w={{ base: "100%", md: "70%" }}
+        autoComplete="email"
       />
       <Text
         color="red.500"

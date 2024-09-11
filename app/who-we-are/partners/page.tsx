@@ -89,6 +89,13 @@ const page = () => {
                     boxSize={{ base: "80px", sm: "100px" }}
                     objectFit="contain"
                     mb={4}
+                    loading="lazy"
+                    style={{
+                      filter: "grayscale(1)",
+                      transition: "all 0.3s ease",
+                      width: "auto",
+                      height: "auto",
+                    }}
                   />
                   <Text fontWeight="semibold" fontSize="md" color="gray.700">
                     {partner.title}

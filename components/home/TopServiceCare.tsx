@@ -108,7 +108,7 @@ const TopServiceCare = () => {
             <Image
               src="/images/woman01.jpg"
               alt="Services"
-              objectFit="cover"
+              style={{ objectFit: "cover" }}
               borderRadius="md"
               maxH="400px"
               mx="auto"

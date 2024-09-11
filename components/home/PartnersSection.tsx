@@ -45,6 +45,8 @@ const MovingPartners = () => {
               height={200}
               style={{
                 objectFit: "contain",
+                width: "auto",
+                height: "auto",
               }}
               loading="lazy"
               title={partner.title}

@@ -78,7 +78,7 @@ const TestimonialsSection = () => {
                 boxSize="120px"
                 src={testimonial.avatar}
                 alt={testimonial.name}
-                objectFit="cover"
+                style={{ objectFit: "cover" }}
                 shadow="md"
               />
               <Text

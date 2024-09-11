@@ -86,7 +86,6 @@ const MentorshipSection = ({
         <Image
           src={imageSrc}
           alt={imageAlt}
-          objectFit="cover"
           width={500}
           height={500}
           style={{
@@ -95,6 +94,7 @@ const MentorshipSection = ({
             overflow: "hidden",
             width: "100%",
             height: "auto",
+            objectFit: "cover",
           }}
         />
       </Box>

@@ -73,7 +73,7 @@ const Section: FC<SectionProps> = ({
           src={image}
           alt={alt}
           borderRadius="xl"
-          objectFit="cover"
+          style={{ objectFit: "cover" }}
           maxH="400px"
           shadow="2xl"
           data-aos="zoom-out-up"
@@ -187,7 +187,7 @@ const CommunityPage: FC = () => {
                 alt="Our Story"
                 borderRadius="xl"
                 shadow="xl"
-                objectFit="cover"
+                style={{ objectFit: "cover" }}
                 data-aos="fade-left"
               />
             </Box>

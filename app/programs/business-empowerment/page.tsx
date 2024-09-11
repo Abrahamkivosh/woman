@@ -80,7 +80,7 @@ const Section = ({
         src={image}
         alt={alt}
         boxSize="50%"
-        objectFit="cover"
+        style={{ objectFit: "cover" }}
         borderRadius="md"
         mb={{ base: 4, md: 0 }}
         mr={{ md: index % 2 === 0 ? 6 : 0 }}

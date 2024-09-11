@@ -96,7 +96,7 @@ const AdvocacyPage = () => {
                 borderRadius="lg"
                 boxShadow="lg"
                 maxH="400px"
-                objectFit="cover"
+                style={{ objectFit: "cover" }}
                 data-aos={getFlipAos(index)}
               />
             </Box>
