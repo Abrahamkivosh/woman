@@ -50,6 +50,7 @@ const TopServiceCare = () => {
           textAlign={{ base: "center", lg: "left" }}
           display="flex"
           flexDir="row"
+          justifyContent="space-between"
         >
           <Text fontSize="3xl" fontWeight="bold" data-aos="zoom-in">
             What We Believe In
@@ -106,11 +107,10 @@ const TopServiceCare = () => {
             data-aos="fade-right"
           >
             <Image
-              src="/images/woman01.jpg"
+              src="/images/history02.webp"
               alt="Services"
               style={{ objectFit: "cover" }}
               borderRadius="md"
-              maxH="400px"
               mx="auto"
             />
           </Box>

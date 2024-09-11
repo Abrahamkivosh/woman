@@ -5,12 +5,12 @@ import {
   Box,
   Flex,
   Heading,
-  Image,
   SimpleGrid,
   Stack,
   Tag,
   Text,
 } from "@chakra-ui/react";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 interface EventInterface {
@@ -54,10 +54,17 @@ const EventCard = ({
     borderWidth="1px"
     borderRadius="lg"
     overflow="hidden"
-    boxShadow="lg"
+    boxShadow="md"
     _hover={{ transform: "scale(1.05)", transition: "0.3s ease" }}
   >
-    <Image src={event.image} alt={event.title} />
+    <Image
+      src={event.image}
+      alt={event.title}
+      style={{ width: "100%", height: "200px" }}
+      loading="eager"
+      width={500}
+      height={350}
+    />
     <Box p={6}>
       <Heading size="md" mb={2}>
         {event.title}
