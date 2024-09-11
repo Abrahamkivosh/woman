@@ -19,7 +19,7 @@ export const metadata = {
     description:
       "Empowering women through technology and innovation. Discover how we support and inspire women in the tech industry.",
     url: "https://womenintechnology.africa/",
-    image: "/images/logo.svg",
+    image: "images/logo_blue.svg",
     site_name: "Woman In Technology And Innovation",
   },
   twitter: {
@@ -28,7 +28,7 @@ export const metadata = {
     title: "Woman In Technology And Innovation",
     description:
       "Empowering women through technology and innovation. Discover how we support and inspire women in the tech industry.",
-    image: "/images/logo.jpg",
+    image: "images/logo_blue.svg",
   },
 };
 export default async function Home() {

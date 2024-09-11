@@ -39,7 +39,7 @@ const Footer = () => {
         <GridItem>
           <VStack align="start" spacing={4}>
             <Image
-              src="/images/logo.jpg"
+              src="/images/logo_white.svg"
               alt={APP_NAME}
               width={150}
               height={150}

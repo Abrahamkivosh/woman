@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     url: url,
     images: [
       {
-        url: `${url}/images/logo.svg`,
+        url: `${url}/images/logo_blue.svg`,
         width: 1200,
         height: 630,
       },
@@ -60,10 +60,10 @@ export const metadata: Metadata = {
     title: "Woman In Technology And Innovation",
     description:
       "Empowering women through technology and innovation. Discover how we support and inspire women in the tech industry.",
-    images: `${url}/images/logo.jpg`,
+    images: `${url}/images/logo_blue.svg`,
   },
   icons: {
-    icon: "/images/logo.jpg",
+    icon: "/images/logo_blue.svg",
   },
   keywords: [
     "Women in Technology",
