@@ -78,7 +78,7 @@ export const quickLinks = [
 
   {
     label: "Latest News",
-    link: "/latest-news",
+    link: "/news",
   },
   {
     label: "Become a member",
@@ -114,7 +114,6 @@ export const navData: NavType[] = [
   },
   {
     label: "Our Programs",
-    link: "/programs",
     subItems: [
       { label: "Education", link: "/programs/education" },
       { label: "Advocacy", link: "/programs/advocancy" },
