@@ -49,6 +49,9 @@ const TestimonialsSection = () => {
       py={{ base: "2rem", sm: "2rem" }}
       px={{ base: "1rem", sm: "2rem", md: "4rem" }}
       bgImage={"/images/testimony.svg"}
+      bgSize="cover"
+      bgRepeat="no-repeat"
+      bgPosition="center center"
     >
       <Text
         fontSize={{ base: "2xl", md: "3xl" }}

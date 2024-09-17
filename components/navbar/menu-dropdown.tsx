@@ -53,7 +53,7 @@ const MenuDropdown = ({ menuItem }: Props) => {
           fontWeight="semibold"
           color="brand.white"
           _hover={{
-            color: "brand.primary",
+            color: "yellow.500",
           }}
         >
           {menuItem.label}
@@ -77,13 +77,9 @@ const MenuDropdown = ({ menuItem }: Props) => {
         gutter={0}
       >
         <MenuButton
-          _active={{
-            bg: "none",
-            color: "brand.primary",
-          }}
           _hover={{
             bg: "none",
-            color: "red",
+            color: "yellow.500",
           }}
           height={73}
           onClick={navigateTo(menuItem.link)}
@@ -96,10 +92,21 @@ const MenuDropdown = ({ menuItem }: Props) => {
               color: "brand.primary",
             }}
           >
-            <Text fontWeight="semibold" color="brand.white">
+            <Text
+              fontWeight="semibold"
+              color="brand.white"
+              _hover={{
+                bg: "none",
+                color: "yellow.500",
+              }}
+            >
               {menuItem.label}
             </Text>
-            {isOpen ? <ChevronUpIcon /> : <ChevronDownIcon />}
+            {isOpen ? (
+              <ChevronUpIcon color="yellow.500" />
+            ) : (
+              <ChevronDownIcon />
+            )}
           </Flex>
         </MenuButton>
 
