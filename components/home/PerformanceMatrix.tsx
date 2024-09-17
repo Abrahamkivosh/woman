@@ -101,7 +101,7 @@ const PerformanceMatrix = () => {
           <Flex
             position="absolute"
             bottom="30%"
-            left="20%"
+            left="0%"
             transform="translateX(-50%)"
             alignItems="center"
             background="rgba(0,0,0,0.5)"

@@ -6,7 +6,7 @@ import Marquee from "react-fast-marquee";
 
 const MovingPartners = () => {
   return (
-    <Box my="6rem" bg="gray.100" py="2rem" borderRadius="xl">
+    <Box my="0rem" bg="gray.100" py="2rem" borderRadius="xl">
       <Box py={2}>
         <Text
           fontSize={{ base: "2xl", md: "3xl" }}

@@ -51,6 +51,7 @@ const MenuDropdown = ({ menuItem }: Props) => {
       <Link href={menuItem.link ? menuItem.link : "/"}>
         <Text
           fontWeight="semibold"
+          color="brand.white"
           _hover={{
             color: "brand.primary",
           }}
@@ -95,7 +96,9 @@ const MenuDropdown = ({ menuItem }: Props) => {
               color: "brand.primary",
             }}
           >
-            <Text fontWeight="semibold">{menuItem.label}</Text>
+            <Text fontWeight="semibold" color="brand.white">
+              {menuItem.label}
+            </Text>
             {isOpen ? <ChevronUpIcon /> : <ChevronDownIcon />}
           </Flex>
         </MenuButton>

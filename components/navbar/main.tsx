@@ -11,7 +11,7 @@ const MainNav = () => {
       <Box>
         <Link href="/">
           <Image
-            src="/images/logo_blue.svg"
+            src="/images/logo_white.svg"
             alt={APP_NAME}
             loading="eager"
             style={{ cursor: "pointer", width: "60%", height: "50%" }}

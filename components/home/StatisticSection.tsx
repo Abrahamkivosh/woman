@@ -31,7 +31,7 @@ const StatisticSection = () => {
   return (
     <Box
       as="section"
-      mt={{ base: "1.5rem", sm: "3rem" }}
+      mt={{ base: "0rem", sm: "0rem" }}
       bgImage="url('/images/woman02.jpg')"
       bgSize="cover"
       bgPosition="center"

@@ -46,8 +46,9 @@ const TestimonialsSection = () => {
   return (
     <Box
       as="section"
-      mt={{ base: "2rem", sm: "3rem" }}
+      py={{ base: "2rem", sm: "2rem" }}
       px={{ base: "1rem", sm: "2rem", md: "4rem" }}
+      bgImage={"/images/testimony.svg"}
     >
       <Text
         fontSize={{ base: "2xl", md: "3xl" }}

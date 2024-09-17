@@ -10,81 +10,48 @@ import {
 } from "react-icons/bi";
 
 const HowWeDoIt = () => {
+  // Updated HowWeDoIt array without the icon key
   const HowWeDoIt = [
     {
-      icon: BiBook,
       title: "Education and Training",
       description: `
-        Provide accessible and affordable technology education and training programs for women and girls.  
-
-        Establish partnerships with educational institutions to integrate technology curriculum focused on girls and women.  
-
-        Offer scholarships and grants to support women pursuing studies in STEM (Science, Technology, Engineering, and Mathematics).
-      `,
+      Offer accessible tech education and training for women and girls, integrate tech curriculums with institutions, and provide scholarships for STEM studies.
+    `,
     },
     {
-      icon: BiBriefcase,
       title: "Empowerment and Employment",
       description: `
-       Facilitate mentorship and internship opportunities with tech companies and professionals. Support women entrepreneurs in technology with resources, training, and funding.  
-
-       Promote and support women-led tech startups and businesses.
-      `,
+      Facilitate tech mentorships and internships, support women entrepreneurs with resources and funding, and promote women-led tech startups.
+    `,
     },
     {
-      icon: BiHeadphone,
       title: "Advocacy and Awareness",
       description: `
-        Create a strong network of women in technology to share resources, opportunities, and support.  
-
-        Organize conferences, workshops, and hackathons to foster collaboration and innovation among women in tech.  
-
-        Develop online platforms for continuous learning, networking, and knowledge sharing.
-      `,
+      Build a strong network for women in tech, organize collaborative events, and create platforms for ongoing learning and networking.
+    `,
     },
     {
-      icon: BiWifi,
       title: "Access to Technology",
       description: `
-        Ensure women in rural and underserved communities have access to technology and the internet.  
-
-        Distribute tech devices and resources to girls and women in need.  
-
-        Implement programs that teach digital literacy and basic tech skills to women of all ages.
-      `,
+      Ensure tech access and internet for women in rural areas, distribute devices, and teach digital literacy and tech skills.
+    `,
     },
     {
-      icon: BiLeaf,
       title: "Sustainability and Growth",
       description: `
-        Develop sustainable models for funding and operation of programs and initiatives.  
-
-        Monitor and evaluate the impact of programs to ensure they are meeting the needs of women in technology.  
-
-        Build partnerships with governments, private sector, and other NGOs to amplify impact and reach.
-      `,
+      Develop sustainable funding models, evaluate program impacts, and collaborate with governments and NGOs to expand reach and effectiveness.
+    `,
     },
     {
-      icon: BiCrown,
       title: "Leadership and Representation",
       description: `
-        Promote women into leadership positions within tech organizations and the broader industry. Highlight and celebrate the achievements of women in technology to inspire others.  
-
-        Encourage and support women in pursuing leadership roles in tech policy and governance.
-      `,
+      Promote women into tech leadership roles, celebrate their achievements, and support their advancement in tech policy and governance.
+    `,
     },
-    // {
-    //   icon: BiFlag,
-    //   title: "Innovation and Research",
-    //   description: `
-    //     Support research and development projects led by women in technology.
-
-    //     Encourage innovation in solving local and global challenges through technology.
-
-    //     Provide platforms for women to showcase their tech innovations and projects.
-    //   `,
-    // },
   ];
+
+  // Array of icons in the order they should be applied
+  const icons = [BiBook, BiBriefcase, BiHeadphone, BiWifi, BiLeaf, BiCrown];
 
   const dataAOSDisplay = [
     "fade-up",
@@ -98,18 +65,39 @@ const HowWeDoIt = () => {
   ];
 
   return (
-    <Box mt={{ base: "1.5rem", sm: "3rem" }}>
-      <Stack display="flex" flexDir="column" align="center" textAlign="center">
+    <Box
+      mt={{ base: "1.5rem", sm: "3rem" }}
+      id="how-we-do-it"
+      bgImage="/images/howWeDoIt.svg"
+      py={{ base: "2rem", sm: "2rem" }}
+      bgSize="cover"
+      bgBlendMode="overlay"
+      bgPos="center"
+      bgRepeat="no-repeat"
+      backgroundAttachment="fixed"
+      bgColor="rgba(0,0,0,0.5)"
+    >
+      <Stack
+        display="flex"
+        flexDir="column"
+        align="center"
+        textAlign="center"
+        color="white"
+      >
         <Text
           as="h2"
           fontSize={{ base: "2xl", sm: "4xl" }}
-          color="black"
-          fontWeight={500}
+          fontWeight="bold"
           data-aos="fade-up"
         >
-          How we Do It
+          How We Do It
         </Text>
-        <Text textAlign="center" maxW="90%" mx="auto">
+        <Text
+          textAlign="center"
+          maxW="80%"
+          mx="auto"
+          fontSize={{ base: "xl", sm: "2xl" }}
+        >
           Through our initiatives, we seek to break down barriers, inspire
           leadership, and promote sustainable growth, enabling women to make a
           significant impact in the tech industry and beyond.
@@ -133,26 +121,38 @@ const HowWeDoIt = () => {
             _hover={{
               transform: "scale(1.1)",
               transition: "all 0.3s ease-in-out",
+              boxShadow: "2xl",
+              bg: "blue.50",
             }}
-            bg="white"
-            boxShadow="md"
-            // different  data-aos display
+            bg="gray.50" // Card background
+            boxShadow="md" // Default shadow
             data-aos-delay={index * 100}
             data-aos={dataAOSDisplay[index]}
           >
             {/* icon */}
             <Stack align="center">
-              <Icon as={how.icon} w={20} h={20} color="primary.800" />
+              <Icon
+                as={icons[index]} // Access icon by index
+                w={20}
+                h={20}
+                color="blue.600"
+                _hover={{
+                  color: "green.800",
+                }}
+              />
             </Stack>
             <Text
               align="center"
-              color="brand.black"
+              color="gray.800"
               fontWeight={600}
               fontSize={20}
               dangerouslySetInnerHTML={{ __html: how.title }}
             />
             <Stack>
-              <Text dangerouslySetInnerHTML={{ __html: how.description }} />
+              <Text
+                color="gray.600"
+                dangerouslySetInnerHTML={{ __html: how.description }}
+              />
             </Stack>
           </Stack>
         ))}
