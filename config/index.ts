@@ -9,13 +9,7 @@ export const CONTACT_PHONE = process.env.CONTACT_PHONE || "+234 703 123 4567";
 
 export const APP_NAME =
   process.env.APP_NAME || "Women In Technology & Innovation Africa";
-export const MISSION = `  Our mission is to work with women, girls and children impacted by
-            the criminal justice system, to restore dignity and hope for
-            successful reintegration. <br /> We are addressing systemic and
-            socio-economic injustices that lead to the imprisonment of the
-            vulnerable and poor, through advocacy, bridging the capacity gap to
-            mitigate the limited capacity of prisons to rehabilitate and reform
-            inmates.`;
+export const MISSION = `  Our mission is to empower women in tech through education, mentorship, advocacy, and networking, promoting leadership, innovation, access to technology, and sustainable growth to drive gender equality and opportunities in the industry.`;
 
 export const CMS_URL =
   process.env.CMS_URL || "https://admin.womenintechnology.africa";
