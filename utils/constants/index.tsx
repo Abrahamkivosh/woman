@@ -168,54 +168,24 @@ export const navData: NavType[] = [
 
 export const partners = [
   {
+    logo: "/partners/dimetechgroup.png",
+    link: "https://dimetechgroup.com/",
+    title: "Dimetechgroup",
+  },
+  {
     logo: "/partners/microsoft.png",
     link: "https://www.microsoft.com",
     title: "Microsoft",
   },
   {
-    logo: "/partners/microsoft.png",
+    logo: "/partners/aws.png",
+    link: "https://www.aws.com",
+    title: "Amazon Web Services",
+  },
+  {
+    logo: "/partners/google.webp",
     link: "https://www.google.com",
     title: "Google",
-  },
-  {
-    logo: "/partners/microsoft.png",
-    link: "https://aws.amazon.com",
-    title: "Amazon Web Services (AWS)",
-  },
-  {
-    logo: "/partners/microsoft.png",
-    link: "https://www.ibm.com",
-    title: "IBM",
-  },
-  {
-    logo: "/partners/microsoft.png",
-    link: "https://www.oracle.com",
-    title: "Oracle",
-  },
-  {
-    logo: "/partners/microsoft.png",
-    link: "https://www.apple.com",
-    title: "Apple",
-  },
-  {
-    logo: "/partners/microsoft.png",
-    link: "https://www.salesforce.com",
-    title: "Salesforce",
-  },
-  {
-    logo: "/partners/microsoft.png",
-    link: "https://www.meta.com",
-    title: "Facebook (Meta)",
-  },
-  {
-    logo: "/partners/microsoft.png",
-    link: "https://www.adobe.com",
-    title: "Adobe",
-  },
-  {
-    logo: "/partners/microsoft.png",
-    link: "https://www.cisco.com",
-    title: "Cisco",
   },
 ];
 
