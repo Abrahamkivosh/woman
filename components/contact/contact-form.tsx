@@ -21,7 +21,7 @@ const schema = z.object({
   name: z.string().nonempty().min(3).max(255),
   email: z.string().email({ message: "Invalid email address" }),
   subject: z.string().nonempty().min(3).max(255),
-  message: z.string().nonempty().min(3).max(255),
+  message: z.string().nonempty().min(3).max(2055),
 });
 
 type ContactFormInputs = z.infer<typeof schema>;

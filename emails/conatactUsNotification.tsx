@@ -41,8 +41,6 @@ const ContactUsNotification = ({
               padding: 10px;
               text-align: center;
               border-radius: 8px 8px 0 0;
-               color: #ffffff;
-              background-color: #0086FF;
             }
             .content {
               padding: 20px;
@@ -57,7 +55,7 @@ const ContactUsNotification = ({
               .actionSection  a {
               text-decoration: none;
               color: #ffffff;
-              background-color: #0086FF;
+              background-color: blue;
               padding: 10px 20px;
               border-radius: 4px;
               }
@@ -70,7 +68,7 @@ const ContactUsNotification = ({
             }
             h2 {
               margin: 0;
-              color: #ffffff;
+              color: #000000;
             }
             p {
               line-height: 1.6;
