@@ -1,7 +1,8 @@
 export const BASE_URL = process.env.BASE_URL || "http://localhost:3000";
 
-export const CONTACT_EMAIL = process.env.CONTACT_EMAIL || "ca3a9fcd45f4be";
-export const PASSWORD_EMAIL = process.env.PASSWORD_EMAIL || "a77d49abc478bf";
+export const CONTACT_EMAIL =
+  process.env.CONTACT_EMAIL || "info@womenintechnology.africa";
+export const PASSWORD_EMAIL = process.env.PASSWORD_EMAIL || "";
 export const PORT_EMAIL = process.env.PORT_EMAIL || "2525";
 export const HOST_EMAIL = process.env.HOST_EMAIL || "sandbox.smtp.mailtrap.io";
 
@@ -15,7 +16,6 @@ export const CMS_URL =
   process.env.CMS_URL || "https://admin.womenintechnology.africa";
 export const CMS_ASSETS_URL =
   process.env.CMS_ASSETS_URL || "https://admin.womenintechnology.africa/assets";
-export const DIRECTUS_ACCESS_TOKEN = process.env.DIRECTUS_ACCESS_TOKEN!;
 export const CMS_TOKEN = process.env.CMS_TOKEN!;
 
 // social media links
