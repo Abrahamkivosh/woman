@@ -49,13 +49,21 @@ const TopServiceCare = () => {
           spacing={6}
           textAlign={{ base: "center", lg: "left" }}
           display="flex"
-          flexDir="row"
-          justifyContent="space-between"
+          flexDir={{ base: "column", lg: "row" }} // Change direction to column on mobile
+          justifyContent="center" // Center the content on mobile
         >
-          <Text fontSize="3xl" fontWeight="bold" data-aos="zoom-in">
+          <Text
+            fontSize={{ base: "2xl", sm: "3xl" }}
+            fontWeight="bold"
+            data-aos="zoom-in"
+          >
             What We Believe In
           </Text>
-          <Text fontSize="lg" maxW="800px" data-aos="fade-right">
+          <Text
+            fontSize={{ base: "md", sm: "lg" }}
+            maxW="800px"
+            data-aos="fade-right"
+          >
             At WITIA, we recognize that women are key to unlocking
             Africa&lsquo;s full potential. Through our comprehensive programs,
             mentorship opportunities, and community support, we aim to inspire,
@@ -65,6 +73,7 @@ const TopServiceCare = () => {
             here to support your journey.
           </Text>
         </Stack>
+
         <Flex
           direction={{ base: "column-reverse", lg: "row" }}
           justify="space-between"

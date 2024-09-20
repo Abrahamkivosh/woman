@@ -29,6 +29,7 @@ const AboutUs = () => {
           boxShadow="xl"
           data-aos-delay="100"
           data-aos="fade-left"
+          display={{ base: "none", sm: "block" }}
         >
           <Image
             src="/images/woman01.jpg"
