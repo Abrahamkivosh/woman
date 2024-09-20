@@ -4,18 +4,16 @@ import { marginX } from "@/utils/constants";
 import {
   AspectRatio,
   Box,
-  Button,
   Flex,
   Heading,
   Image,
-  ListItem,
   SimpleGrid,
   Stack,
   Text,
-  UnorderedList,
+  Tooltip,
 } from "@chakra-ui/react";
-import Link from "next/link";
 
+import { APP_NAME } from "@/config";
 import "./education.module.scss";
 
 // Page component
@@ -25,11 +23,10 @@ const page = () => {
       <CommonHero
         title="Education"
         path="education"
-        h="30vh"
         imgUrl="/images/woman02.jpg"
       />
 
-      <Stack spacing={10} py={8}>
+      <Stack spacing={10} py={0}>
         {/* Intro Section */}
         <Box
           width="100%"
@@ -59,56 +56,97 @@ const page = () => {
                 mb={4}
                 data-aos="fade-right"
               >
-                Accelerate your education and career with our programs
+                Empowering Women Through Education and Technology
               </Heading>
               <Text fontSize="lg" mb={6}>
-                We offer a variety of programs to help you learn new skills and
-                advance your career.
+                At{" "}
+                <Tooltip
+                  label={APP_NAME}
+                  aria-label="A  tooltop for WIRIA"
+                  fontSize={{ base: "lg", sm: "xl" }}
+                  fontWeight="bold"
+                  color="brand.primary"
+                  bgColor="white"
+                  hasArrow
+                >
+                  <Text
+                    as="span"
+                    color="brand.primary"
+                    cursor="pointer"
+                    fontWeight="800"
+                  >
+                    WITIA
+                  </Text>
+                </Tooltip>{" "}
+                , we believe that education is the cornerstone of empowerment.
+                Our education programs are tailored to equip women with the
+                technical skills and knowledge required to excel in today’s
+                fast-paced tech environment. We offer:
               </Text>
-              <Box>
-                <Heading as="h3" fontSize="2xl" fontWeight="semibold" mb={4}>
-                  Programs
-                </Heading>
-                <UnorderedList spacing={3} fontSize="lg">
-                  <ListItem
-                    data-aos="fade-right"
-                    data-aos-delay="200"
-                    data-aos-duration="1000"
-                  >
-                    Technology Education
-                  </ListItem>
-                  <ListItem
-                    data-aos="fade-right"
-                    data-aos-delay="400"
-                    data-aos-duration="1000"
-                  >
-                    Professional Development
-                  </ListItem>
-                  <ListItem
-                    data-aos="fade-right"
-                    data-aos-delay="600"
-                    data-aos-duration="1000"
-                  >
-                    Leadership Training
-                  </ListItem>
-                  <ListItem
-                    data-aos="fade-right"
-                    data-aos-delay="800"
-                    data-aos-duration="1000"
-                  >
-                    Entrepreneurship
-                  </ListItem>
-                </UnorderedList>
-              </Box>
-              <Button
-                colorScheme="purple"
-                size="lg"
-                mt={8}
-                _hover={{ bg: "purple.600" }}
-                data-aos="fade-up"
-              >
-                <Link href="/contact-us">Get Started</Link>
-              </Button>
+
+              {/* Card-like Section */}
+              <SimpleGrid columns={{ base: 1, md: 2 }} spacing={6}>
+                {/* Card 1: Training Programs */}
+                <Flex
+                  direction="column"
+                  bg="purple.100"
+                  borderRadius="md"
+                  boxShadow="md"
+                  p={5}
+                  data-aos="fade-up"
+                  data-aos-delay="200"
+                >
+                  <Heading fontSize="2xl" color="purple.700" mb={3}>
+                    Training Programs
+                  </Heading>
+                  <Text fontSize="md" color="gray.600">
+                    Comprehensive courses covering essential areas such as
+                    coding, data science, cybersecurity, artificial
+                    intelligence, and more. Our curriculum is inclusive,
+                    accessible, and aligned with industry standards.
+                  </Text>
+                </Flex>
+
+                {/* Card 2: Workshops */}
+                <Flex
+                  direction="column"
+                  bg="purple.100"
+                  borderRadius="md"
+                  boxShadow="md"
+                  p={5}
+                  data-aos="fade-up"
+                  data-aos-delay="400"
+                >
+                  <Heading fontSize="2xl" color="purple.700" mb={3}>
+                    Workshops
+                  </Heading>
+                  <Text fontSize="md" color="gray.600">
+                    Hands-on workshops led by industry experts focusing on
+                    practical skills and real-world applications. Apply what you
+                    learn directly to your career or entrepreneurial ventures.
+                  </Text>
+                </Flex>
+
+                {/* Card 3: Scholarships */}
+                <Flex
+                  direction="column"
+                  bg="purple.100"
+                  borderRadius="md"
+                  boxShadow="md"
+                  p={5}
+                  data-aos="fade-up"
+                  data-aos-delay="600"
+                >
+                  <Heading fontSize="2xl" color="purple.700" mb={3}>
+                    Scholarships
+                  </Heading>
+                  <Text fontSize="md" color="gray.600">
+                    We provide scholarships to women who show promise and
+                    dedication in tech. Our scholarships aim to break financial
+                    barriers and provide access to high-quality tech education.
+                  </Text>
+                </Flex>
+              </SimpleGrid>
             </Box>
 
             {/* Right Image */}
@@ -125,6 +163,7 @@ const page = () => {
             </Box>
           </SimpleGrid>
 
+          {/* Additional Information Section */}
           <Box textAlign="center" py={10} bg="gray.50">
             <Heading as="h2" fontSize="3rem" mb={6} data-aos="fade-up">
               We Provide a Human-Centered Approach

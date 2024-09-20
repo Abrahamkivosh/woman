@@ -23,20 +23,6 @@ const testimonials = [
     testimonial:
       "Thanks to the mentorship at WITIA, I am now confident in my skills and ready to take on new challenges in the tech industry.",
   },
-  {
-    id: 3,
-    name: "Emily Johnson",
-    avatar: "/images/woman01.jpg",
-    testimonial:
-      "WITIA provided me with the resources and community I needed to grow and succeed as a woman in technology.",
-  },
-  {
-    id: 4,
-    name: "Sarah Lee",
-    avatar: "/images/woman01.jpg",
-    testimonial:
-      "Joining WITIA was one of the best decisions I've made. The support and opportunities have been invaluable in my journey as a tech professional.",
-  },
 ];
 
 const TestimonialsSection = () => {

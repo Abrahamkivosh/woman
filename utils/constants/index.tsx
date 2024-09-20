@@ -253,180 +253,32 @@ export const teamMembers = [
 export const fullNewsData = [
   {
     title: "Breaking: Tech Innovation in Africa",
-    excerpt:
-      "Discover how technology is revolutionizing industries across the African continent.",
-    imgUrl: "/images/woman01.jpg",
     category: "Technology",
     date: "September 10, 2024",
     slug: "breaking-tech-innovation-in-africa",
+    image: "/images/woman01.jpg",
+    subTitle:
+      "Discover how technology is revolutionizing industries across the African continent.",
+    description:
+      "From fintech to agritech, tech innovation is transforming the way we live and work in Africa. Learn more about the latest trends and developments in the tech industry and how they are impacting businesses and communities across the continent.",
   },
   {
-    title: "Empowering Women in Tech",
-    excerpt: "Explore stories of women leading the charge in the tech world.",
-    imgUrl: "/images/woman02.jpg",
-    category: "Empowerment",
-    date: "September 8, 2024",
-    slug: "empowering-women-in-tech",
-  },
-  {
-    title: "Mentorship: The Key to Success",
-    excerpt:
-      "Why mentorship is crucial for career growth in the tech industry.",
-    imgUrl: "/images/empowerment.jpg",
-    category: "Career",
-    date: "September 5, 2024",
-    slug: "mentorship-the-key-to-success",
-  },
-  {
-    title: "Africa's Next Generation of Innovators",
-    excerpt: "Spotlighting young talents and their groundbreaking ideas.",
-    imgUrl: "/images/woman02.jpg",
+    title: "Pioneering Innovation and Driving Change",
     category: "Innovation",
-    date: "September 2, 2024",
-    slug: "africas-next-generation-of-innovators",
-  },
-  {
-    title: "AI in Healthcare: Opportunities and Challenges",
-    excerpt:
-      "Exploring how AI is transforming the healthcare sector in Africa.",
-    imgUrl: "/images/woman01.jpg",
-    category: "Healthcare",
-    date: "August 28, 2024",
-    slug: "ai-in-healthcare-opportunities-and-challenges",
-  },
-  {
-    title: "Sustainable Energy Projects on the Rise",
-    excerpt:
-      "The push for clean, renewable energy is growing across the continent.",
-    imgUrl: "/images/woman03.webp",
-    category: "Energy",
-    date: "August 25, 2024",
-    slug: "sustainable-energy-projects-on-the-rise",
-  },
-  {
-    title: "The Role of Blockchain in African Fintech",
-    excerpt:
-      "Blockchain technology is driving innovation in Africa's financial sector.",
-    imgUrl: "/images/history01.webp",
-    category: "Finance",
-    date: "August 22, 2024",
-    slug: "the-role-of-blockchain-in-african-fintech",
-  },
-  {
-    title: "Education for All: Digital Learning Solutions",
-    excerpt:
-      "New digital platforms are expanding access to quality education in remote areas.",
-    imgUrl: "/images/history02.webp",
-    category: "Education",
-    date: "August 19, 2024",
-    slug: "education-for-all-digital-learning-solutions",
-  },
-  {
-    title: "Tech for Good: Social Impact Startups",
-    excerpt:
-      "Startups across Africa are using tech to tackle social challenges.",
-    imgUrl: "/images/social-impact.jpg",
-    category: "Social Impact",
-    date: "August 15, 2024",
-    slug: "tech-for-good-social-impact-startups",
-  },
-  {
-    title: "Cybersecurity Trends in Africa",
-    excerpt:
-      "How the continent is addressing the growing threat of cyberattacks.",
-    imgUrl: "/images/cybersecurity.jpg",
-    category: "Security",
-    date: "August 12, 2024",
-    slug: "cybersecurity-trends-in-africa",
-  },
-  {
-    title: "5G Rollout in Africa: What to Expect",
-    excerpt:
-      "The 5G revolution is coming to Africa, bringing faster internet and more opportunities.",
-    imgUrl: "/images/5g.jpg",
-    category: "Technology",
-    date: "August 10, 2024",
-    slug: "5g-rollout-in-africa-what-to-expect",
-  },
-  {
-    title: "Women Entrepreneurs Leading Change",
-    excerpt:
-      "Meet the women entrepreneurs who are transforming their industries.",
-    imgUrl: "/images/women-entrepreneurs.jpg",
-    category: "Empowerment",
-    date: "August 5, 2024",
-    slug: "women-entrepreneurs-leading-change",
-  },
-  {
-    title: "The Future of Remote Work in Africa",
-    excerpt:
-      "How remote work is shaping the future of employment across the continent.",
-    imgUrl: "/images/remote-work.jpg",
-    category: "Work",
-    date: "July 30, 2024",
-    slug: "the-future-of-remote-work-in-africa",
-  },
-  {
-    title: "Tech Hubs Across Africa: Driving Innovation",
-    excerpt:
-      "A look at the tech hubs powering innovation and entrepreneurship.",
-    imgUrl: "/images/tech-hubs.jpg",
-    category: "Technology",
-    date: "July 25, 2024",
-    slug: "tech-hubs-across-africa-driving-innovation",
-  },
-  {
-    title: "Green Tech: Innovations in Sustainability",
-    excerpt:
-      "How African startups are addressing climate change with green tech.",
-    imgUrl: "/images/green-tech.jpg",
-    category: "Sustainability",
-    date: "July 20, 2024",
-    slug: "green-tech-innovations-in-sustainability",
-  },
-  {
-    title: "Fintech in Africa: Trends and Opportunities",
-    excerpt:
-      "The rapid growth of fintech solutions is transforming the financial landscape.",
-    imgUrl: "/images/fintech.jpg",
-    category: "Finance",
-    date: "July 15, 2024",
-    slug: "fintech-in-africa-trends-and-opportunities",
-  },
-  {
-    title: "Startups in Africa: The Next Unicorns",
-    excerpt:
-      "The African startup scene is booming, with several companies nearing unicorn status.",
-    imgUrl: "/images/startups.jpg",
-    category: "Startups",
-    date: "July 10, 2024",
-    slug: "startups-in-africa-the-next-unicorns",
-  },
-  {
-    title: "The Rise of E-Commerce in Africa",
-    excerpt:
-      "E-commerce is transforming retail and creating new opportunities for entrepreneurs.",
-    imgUrl: "/images/e-commerce.jpg",
-    category: "E-Commerce",
-    date: "July 5, 2024",
-    slug: "the-rise-of-e-commerce-in-africa",
-  },
-  {
-    title: "How Data Analytics is Powering Growth",
-    excerpt:
-      "Data-driven decision making is helping businesses grow faster and smarter.",
-    imgUrl: "/images/data-analytics.jpg",
-    category: "Data",
-    date: "July 1, 2024",
-    slug: "how-data-analytics-is-powering-growth",
-  },
-  {
-    title: "The Future of African Digital Economies",
-    excerpt:
-      "African digital economies are growing rapidly. Here's what to expect.",
-    imgUrl: "/images/digital-economy.jpg",
-    category: "Economy",
-    date: "June 25, 2024",
-    slug: "the-future-of-african-digital-economies",
+    date: "September 20, 2024",
+    slug: "pioneering-innovation-and-driving-change",
+    image: "/images/community.jpg",
+    subTitle:
+      "The technology landscape in Africa is witnessing a remarkable transformation,",
+    description: `
+    <p>
+    The technology landscape in Africa is witnessing a remarkable transformation, thanks in large part to the contributions of women innovators across the continent. These trailblazers are not only breaking barriers but also spearheading advancements that are reshaping industries and improving lives.</p>
+    <p>One standout example is Funke Opeke from Nigeria, who founded MainOne, a leading provider of telecom services in West Africa. Her work has significantly improved internet connectivity across the region, reducing the digital divide and enabling businesses and communities to thrive. Opeke’s impact in the tech industry is a testament to the critical role that women are playing in driving technological progress in Africa.</p>
+    <p>In the healthtech sector, women-led companies have made significant strides, with firms like Kasha in Kenya raising substantial funding to support their innovative solutions. Kasha, which secured $21 million in a recent funding round, exemplifies the growing influence of women in the tech industry. This surge in funding, over 2,000% higher than previous years, highlights the increasing recognition of women's contributions to technology and the broader economy.</p>
+    <p>Moreover, organizations like Women in Innovation and Technology Africa based in Kenya, are playing a pivotal role in championing these achievements. Collaborating with institutions, they are not only recognizing women’s accomplishments but also creating platforms for further growth and development through initiatives like the e-digital connect summit that aims to bring women in technology together to engage and network in an effort to foster more information sharing and collaboration. These efforts aim to bridge the gender gap and inspire the next generation of female leaders in technology.</p>
+    <p>As these women continue to innovate and lead, they are not only transforming the tech industry in Africa but also setting the stage for a more inclusive and prosperous future. The momentum generated by their efforts is likely to inspire more women to pursue careers in technology, ensuring that Africa’s tech landscape remains dynamic and forward-looking.</p>
+    <p>Their stories are a powerful reminder of the potential that lies within Africa's tech sector and the critical role that women play in unlocking that potential</p>
+    
+    `,
   },
 ];

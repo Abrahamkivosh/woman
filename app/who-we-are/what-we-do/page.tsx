@@ -21,25 +21,25 @@ const focusAreas = [
     icon: FaCode,
     title: "Tech Education",
     description:
-      "Offering coding bootcamps and tech courses to equip women with in-demand skills in software development, data science, and more.",
+      "We provide comprehensive training programs in coding, data science, digital marketing, and other essential tech skills. Our workshops and boot camps are designed to be accessible to women at all levels, from beginners to advanced practitioners. By partnering with leading tech companies and educational institutions, we ensure our curriculum is up-to-date and relevant to current industry demands.",
   },
   {
     icon: FaChalkboardTeacher,
-    title: "Mentorship",
+    title: "Advocancy",
     description:
-      "Connecting women with industry leaders who provide guidance, support, and career advice.",
+      "We actively campaign for policy changes and corporate practices that promote gender diversity in the tech sector. WITIA works closely with governments, private sector leaders, and other NGOs to influence policies that create a more inclusive and supportive environment for women in technology.",
   },
   {
     icon: FaUsers,
     title: "Community Building",
     description:
-      "Fostering a strong network of women in tech through events, workshops, and hackathons.",
+      "We believe that a strong, supportive community is essential for success. WITIA creates spaces—both physical and virtual—where women in tech can connect, collaborate, and share experiences. Our events, conferences, and online platforms provide a network of peers and mentors who are committed to helping each other succeed.",
   },
   {
     icon: FaGlobeAfrica,
-    title: "Global Outreach",
+    title: "Business Empowerment",
     description:
-      "Expanding opportunities for women in tech beyond borders by collaborating with international partners.",
+      "We believe that a strong, supportive community is essential for success. WITIA creates spaces—both physical and virtual—where women in tech can connect, collaborate, and share experiences. Our events, conferences, and online platforms provide a network of peers and mentors who are committed to helping each other succeed.",
   },
 ];
 
@@ -70,7 +70,6 @@ const page = () => {
       <CommonHero
         title="What We Do"
         path="what-we-do"
-        h="30vh"
         imgUrl="/images/woman02.jpg"
       />
 
@@ -89,9 +88,9 @@ const page = () => {
             Empowering Women Through Technology and Innovation
           </Text>
           <Text fontSize={{ base: "md", sm: "lg" }} mt={2} data-aos="fade-down">
-            At WITIA, we are on a mission to bridge the gender gap in technology
-            by providing education, mentorship, and career opportunities for
-            women across Africa.
+            At Women in Technology and Innovation Africa, we focus on four key
+            areas: education, advocacy, business empowerment, and community
+            building.
           </Text>
         </Box>
 
@@ -104,7 +103,7 @@ const page = () => {
             Our Key Focus Areas
           </Heading>
 
-          <SimpleGrid columns={{ base: 1, sm: 3, md: 4 }} spacing={8}>
+          <SimpleGrid columns={{ base: 1, sm: 2, md: 2 }} spacing={8}>
             {focusAreas.map((area, index) => (
               <Flex
                 key={index}

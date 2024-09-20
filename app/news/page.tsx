@@ -11,32 +11,64 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/react";
+import { motion } from "framer-motion"; // Import framer-motion for animations
 import Link from "next/link";
 import { useState } from "react";
 
+// Motion components from Chakra UI
+const MotionBox = motion.create(Box as any) as any;
+const MotionHeading = motion.create(Heading as any) as any;
+
 const NewsPage = () => {
-  // State to manage displayed articles and loading status
   const [visibleArticles, setVisibleArticles] = useState(6); // Start with 6 articles
   const [loadingMore, setLoadingMore] = useState(false);
 
-  // Function to handle loading more articles
   const handleLoadMore = () => {
-    setLoadingMore(true);
-    setTimeout(() => {
-      setVisibleArticles((prev) => prev + 6); // Show 6 more articles
-      setLoadingMore(false);
-    }, 2000); // Simulate 2-second loading time
+    if (visibleArticles < fullNewsData.length) {
+      setLoadingMore(true);
+      setTimeout(() => {
+        setVisibleArticles((prev) => prev + 6);
+        setLoadingMore(false);
+      }, 2000);
+    }
   };
 
   return (
     <>
       {/* Hero Section */}
-      <CommonHero
-        title="News"
-        path="News"
-        h="40vh"
-        imgUrl="/images/history01.webp"
-      />
+      <CommonHero title="News" path="News" imgUrl="/images/news.jpg" />
+
+      {/* Intro Text Section */}
+      <Box
+        bg="white"
+        py="3rem"
+        px={{ base: "2rem", sm: "4rem" }}
+        textAlign="center"
+      >
+        <MotionHeading
+          fontSize="2xl"
+          fontWeight="bold"
+          color="gray.700"
+          mb={4}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          Stay informed with the latest news and updates from Women in
+          Technology and Innovation Africa (WITIA)
+        </MotionHeading>
+        <Text
+          fontSize="lg"
+          color="gray.600"
+          maxW="3xl"
+          mx="auto"
+          data-aos="fade-up"
+        >
+          From success stories of women in tech to insights on industry trends,
+          our news section keeps you connected to what’s happening in the world
+          of technology and innovation across Africa.
+        </Text>
+      </Box>
 
       {/* News Section */}
       <Box
@@ -44,37 +76,44 @@ const NewsPage = () => {
         py={{ base: "4rem", sm: "6rem" }}
         px={{ base: "2rem", sm: "4rem" }}
       >
-        <Heading
+        <MotionHeading
           textAlign="center"
           mb={12}
           color="teal.600"
           fontSize="3xl"
           fontWeight="bold"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}
         >
           Latest News and Updates
-        </Heading>
+        </MotionHeading>
 
         {/* News Articles Grid */}
         <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={10}>
           {fullNewsData.slice(0, visibleArticles).map((newsItem, index) => (
-            <Box
+            <MotionBox
               key={index}
               bg="white"
               borderRadius="lg"
               overflow="hidden"
-              transition="transform 0.3s ease, box-shadow 0.3s ease"
-              _hover={{ transform: "scale(1.03)", boxShadow: "xl" }}
               display="flex"
               flexDirection="column"
+              _hover={{ transform: "scale(1.03)", boxShadow: "xl" }}
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: index * 0.2 }}
+              data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
             >
               <Image
-                src={newsItem.imgUrl}
+                src={newsItem.image}
                 alt={newsItem.title}
                 width="100%"
                 height="200px"
-                style={{ objectFit: "cover" }}
-                borderRadius="lg 0 0 0"
+                objectFit="cover"
+                loading="lazy"
               />
+
               <Box p={6} flex="1" display="flex" flexDirection="column">
                 <Box
                   display="flex"
@@ -99,7 +138,7 @@ const NewsPage = () => {
                   {newsItem.title}
                 </Heading>
                 <Text color="gray.600" mb={4} flex="1">
-                  {newsItem.excerpt}
+                  {newsItem.subTitle}
                 </Text>
 
                 <Button
@@ -112,23 +151,25 @@ const NewsPage = () => {
                   <Link href={"news/" + newsItem.slug}> Read More</Link>
                 </Button>
               </Box>
-            </Box>
+            </MotionBox>
           ))}
         </SimpleGrid>
 
         {/* Load More Button */}
-        <VStack mt={12}>
-          <Button
-            onClick={handleLoadMore}
-            isLoading={loadingMore}
-            loadingText="Loading"
-            colorScheme="teal"
-            variant="solid"
-            size="lg"
-          >
-            Load More
-          </Button>
-        </VStack>
+        {visibleArticles < fullNewsData.length && (
+          <VStack mt={12}>
+            <Button
+              onClick={handleLoadMore}
+              isLoading={loadingMore}
+              loadingText="Loading"
+              colorScheme="teal"
+              variant="solid"
+              size="lg"
+            >
+              Load More
+            </Button>
+          </VStack>
+        )}
       </Box>
     </>
   );

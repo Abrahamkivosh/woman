@@ -106,7 +106,7 @@ const MentorshipPage = () => {
   return (
     <>
       {/* Hero Section */}
-      <CommonHero path="mentorship" h="40vh" />
+      <CommonHero path="mentorship" />
 
       {/* Content Sections */}
       <Stack

@@ -100,7 +100,6 @@ const BecomeAVolunteerPage = () => {
       <CommonHero
         title="Become a Volunteer"
         path="programs/volunteer"
-        h="40vh"
         imgUrl="/images/woman02.jpg"
         data-aos="fade-up"
       />

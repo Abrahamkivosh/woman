@@ -19,12 +19,7 @@ const NewsArticlePage = ({ params: { news } }: Props) => {
   return (
     <>
       {/* Hero Section */}
-      <CommonHero
-        title="News"
-        path="News"
-        h="40vh"
-        imgUrl="/images/history01.webp"
-      />
+      <CommonHero title="News" path="News" imgUrl="/images/history01.webp" />
 
       {/* News Section */}
       <Box
@@ -41,7 +36,7 @@ const NewsArticlePage = ({ params: { news } }: Props) => {
           boxShadow="2xl"
         >
           <Image
-            src={newsArticle.imgUrl}
+            src={newsArticle.image}
             alt={newsArticle.title}
             borderRadius="lg"
             mb={6}
@@ -56,9 +51,12 @@ const NewsArticlePage = ({ params: { news } }: Props) => {
           <Text color="gray.600" fontSize="sm" mb={4}>
             {newsArticle.date}
           </Text>
-          <Text fontSize="lg" color="gray.700" lineHeight="1.8">
-            {newsArticle.excerpt}
-          </Text>
+          <Text
+            fontSize="lg"
+            color="gray.700"
+            lineHeight="1.8"
+            dangerouslySetInnerHTML={{ __html: newsArticle.description }}
+          />
         </Box>
       </Box>
     </>

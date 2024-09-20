@@ -1,4 +1,3 @@
-"use client";
 import { CommonHero } from "@/components/common";
 import {
   Box,
@@ -6,12 +5,12 @@ import {
   Flex,
   Heading,
   Image,
+  Link,
   Stack,
   Text,
   VStack,
 } from "@chakra-ui/react";
-import AOS from "aos";
-import { FC, useEffect } from "react";
+import { FC } from "react";
 
 interface SectionProps {
   title: string;
@@ -65,7 +64,7 @@ const Section: FC<SectionProps> = ({
           data-aos="zoom-in-up"
           data-aos-duration="2000"
         >
-          Join Us Today
+          <Link href="/contact-us">Join Us Today</Link>
         </Button>
       </Box>
       <Box flex="1" mt={{ base: 6, md: 0 }}>
@@ -85,38 +84,33 @@ const Section: FC<SectionProps> = ({
 };
 
 const CommunityPage: FC = () => {
-  useEffect(() => {
-    AOS.refresh(); // Refresh AOS to apply animations
-  }, []);
-
   return (
     <>
       {/* Hero Section */}
       <CommonHero
         title="Community"
         path="programs/community"
-        h="60vh"
         imgUrl="/images/woman02.jpg"
       />
 
       {/* Main Content Section */}
-      <Stack spacing={16} py={10} bg="gray.100">
+      <Stack spacing={16} py={0} bg="gray.100">
         {/* Section 1: Welcome to Our Community */}
         <Section
           title="Welcome to Our Vibrant Community"
-          description="Join hands with us in creating a space where everyone thrives. Our community is built on shared values, support, and collaboration. Together, we can achieve great things and foster growth."
+          description="Building a strong and supportive community is at the heart of everything we do at WITIA. We are dedicated to creating a space where women in technology can come together, share, learn, and grow."
           image="/images/girlpower.png"
           alt="Community Together"
           aosAnimation="fade-up"
         />
-        {/* Section 2: Our Core Values */}
+        {/* Section 2: Our community initiatives include: */}
         <Box px={{ base: "2rem", lg: "8rem" }} py="6rem">
           <Heading
             textAlign="center"
             fontSize={{ base: "3xl", lg: "5xl" }}
             mb={12}
           >
-            Our Core Values
+            Our community initiatives include:
           </Heading>
           <Flex
             direction={{ base: "column", md: "row" }}
@@ -130,13 +124,15 @@ const CommunityPage: FC = () => {
               textAlign="center"
               data-aos="fade-up"
             >
-              <Image src="/images/community.jpg" alt="Collaboration" />
+              <Image src="/images/community.jpg" alt="Events and Forums" />
               <Heading fontSize="2xl" color="purple.700">
-                Collaboration
+                Events and Forums:
               </Heading>
               <Text>
-                We believe in working together, pooling resources, and creating
-                synergy to foster a productive environment.
+                We host regular events, including conferences, panel
+                discussions, and forums, where women in tech can engage with
+                industry leaders, share insights, and discuss the latest trends
+                in technology and innovation
               </Text>
             </VStack>
             <VStack
@@ -146,13 +142,16 @@ const CommunityPage: FC = () => {
               textAlign="center"
               data-aos="fade-up"
             >
-              <Image src="/images/empowerment.jpg" alt="Empowerment" />
+              <Image src="/images/empowerment.jpg" alt="Online Platforms" />
               <Heading fontSize="2xl" color="purple.700">
-                Empowerment
+                Online Platforms
               </Heading>
               <Text>
-                Every individual in our community is empowered to grow and
-                contribute to the greater good.
+                Our online platforms provide a space for women to connect,
+                collaborate, and support each other. Whether it&apos;s through
+                our forums, social media groups, or digital meetups, we ensure
+                that our community members have access to a network of
+                like-minded women across Africa.
               </Text>
             </VStack>
             <VStack
@@ -162,13 +161,19 @@ const CommunityPage: FC = () => {
               textAlign="center"
               data-aos="fade-up"
             >
-              <Image src="/images/innovation.jpeg" alt="Innovation" />
+              <Image
+                src="/images/innovation.jpeg"
+                alt="Collaborative Projects:"
+              />
               <Heading fontSize="2xl" color="purple.700">
-                Innovation
+                Collaborative Projects:
               </Heading>
               <Text>
-                We encourage innovation and creative solutions to tackle the
-                challenges of today and tomorrow.
+                We encourage our members to work together on projects that push
+                the boundaries of technology and innovation. Through
+                collaboration, we believe that we can drive change and create
+                solutions that have a lasting impact on the tech industry in
+                Africa.
               </Text>
             </VStack>
           </Flex>
@@ -203,20 +208,18 @@ const CommunityPage: FC = () => {
                 Our Community&apos;s Story
               </Heading>
               <Text fontSize="lg" mb={6} color="gray.700">
-                Our community started with a vision to bring people together who
-                shared a passion for collaboration and empowerment. Over the
-                years, we have grown into a thriving network of individuals
-                dedicated to making a positive impact.
+                At WITIA, our community is more than just a network—it&apos;s a
+                movement of women supporting and uplifting each other in the
+                technology space. Through regular events, forums, and
+                collaborative projects, we create opportunities for women to
+                engage with industry leaders, share knowledge, and drive
+                innovation. Our online platforms foster continuous connection
+                and support, bringing together women from all corners of Africa
+                to collaborate, learn, and grow. Together, we are not just
+                participating in the tech industry—we are shaping its future,
+                empowering each other to push boundaries and create meaningful
+                change across the continent.
               </Text>
-              <Button
-                bg="brand.primary"
-                color="white"
-                size="lg"
-                _hover={{ bg: "purple.400" }}
-                shadow="lg"
-              >
-                Learn More
-              </Button>
             </Box>
           </Flex>
         </Box>

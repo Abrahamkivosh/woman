@@ -42,7 +42,6 @@ const page = () => {
       <CommonHero
         title="Our Partners"
         path="partners"
-        h="30vh"
         imgUrl="/images/woman02.jpg"
       />
 

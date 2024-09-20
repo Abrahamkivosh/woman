@@ -1,4 +1,4 @@
-import { APP_NAME, MISSION } from "@/config";
+import { APP_NAME } from "@/config";
 import { marginX } from "@/utils/constants";
 import {
   Box,
@@ -56,11 +56,13 @@ const AboutUs = () => {
             </Text>
             <Text pl={4}>to WITIA</Text>
           </Heading>
-          <Text
-            data-aos="fade-up-right"
-            fontSize={{ base: "md", sm: "lg" }}
-            dangerouslySetInnerHTML={{ __html: MISSION }}
-          />
+          <Text data-aos="fade-up-right" fontSize={{ base: "md", sm: "lg" }}>
+            Our mission is to empower women across Africa by equipping them with
+            the skills, resources, and opportunities they need to thriveinthe
+            tech industry. We are committed to closing the gender gap in
+            technology, fostering innovation, and driving sustainable
+            development across the continent.
+          </Text>
           <Box>
             <Link href="/who-we-are/">
               <Button

@@ -224,7 +224,7 @@ const WhoWeAre = () => {
             data-aos="fade-left"
           >
             <Image
-              src="/images/woman01.jpg"
+              src="/images/networking-mentorship.webp"
               alt={APP_NAME}
               width={500}
               height={500}
@@ -248,13 +248,70 @@ const WhoWeAre = () => {
               <Text pl={4}> WITIA</Text>
             </Heading>
             <Text fontSize={{ base: "md", sm: "lg" }} data-aos="fade-up-right">
-              Women In Technology & Innovation Africa (WITIA) is a dedicated
-              platform that empowers women by providing access to technology
-              education, mentorship, and resources. Our mission is to work with
-              women across Africa to break barriers in technology and foster
-              innovation that transforms lives and communities.
+              Women in Technology and Innovation Africa (WITIA) is a non-profit
+              organization dedicated to promoting gender equality in technology
+              and innovation across the African continent. Founded in 2024 by a
+              group of technology experts and innovators, WITIA is driven by the
+              belief that when women are empowered in the tech industry, it
+              leads to transformative growth not only for the women themselves
+              but for society as a whole. Our mission is to bridge the gender
+              gap in technology by providing women with the skills, knowledge,
+              and opportunities they need to excel. We envision an Africa where
+              women are equal contributors to the tech industry, driving
+              innovation, and leading in fields traditionally dominated by men.
             </Text>
           </Stack>
+        </SimpleGrid>
+
+        <SimpleGrid
+          marginX={marginX}
+          columns={{ base: 1, md: 2 }}
+          spacing={8}
+          alignItems="center"
+          my={{ base: "1rem", sm: "1rem" }}
+        >
+          <Stack gap={{ base: 2, sm: 4 }} data-aos="fade-up">
+            <Heading
+              as="h2"
+              fontSize={{ base: "4xl", sm: "6xl" }}
+              display="flex"
+              flexDir={{ base: "row", sm: "row" }}
+            >
+              <Text color="brand.primary" className="welcomeText">
+                Our Goal
+              </Text>
+            </Heading>
+            <Text fontSize={{ base: "md", sm: "lg" }} data-aos="fade-up-right">
+              Women in Technology and Innovation Africa aspires to reach
+              hundreds of thousands of women across multiple African countries.
+              Our programs will help women create a passion in technology,
+              acquire skills, secure jobs in leading tech companies, turn their
+              innovative ideas to reality, launch their own tech startups, and
+              gain the confidence to pursue careers in a field where they were
+              once underrepresented. By supporting women in technology, we are
+              not only changing individual lives but also contributing to a more
+              innovative and inclusive Africa.
+            </Text>
+          </Stack>
+          <Box
+            height={{ base: "20rem", sm: "30rem" }}
+            overflow="hidden"
+            borderRadius="xl"
+            boxShadow="xl"
+            data-aos="fade-left"
+          >
+            <Image
+              src="/images/advocacy3.jpg"
+              alt={APP_NAME}
+              width={500}
+              height={500}
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+              }}
+            />
+          </Box>
         </SimpleGrid>
 
         <Box

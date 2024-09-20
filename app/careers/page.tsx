@@ -46,7 +46,7 @@ const Careerpage: React.FC = () => {
   return (
     <>
       {/* Hero Section */}
-      <CommonHero title="Careers" path="careers" h="50vh" />
+      <CommonHero title="Careers" path="careers" />
 
       {/* Main Content */}
       <Stack spacing={16} py={{ base: "2rem", lg: "2rem" }}>
@@ -76,8 +76,9 @@ const Careerpage: React.FC = () => {
                   mb={6}
                   textAlign={{ base: "center", md: "left" }}
                 >
-                  Why Work With Us?
+                  Why Join Us?
                 </Heading>
+
                 <Text
                   fontSize={{ base: "md", lg: "lg" }}
                   color="gray.700"
@@ -85,10 +86,23 @@ const Careerpage: React.FC = () => {
                   maxW="2xl"
                   mx="auto"
                 >
-                  Our company is more than just a workplace—it&apos;s a
-                  community where innovation thrives and your ideas matter. We
-                  offer a vibrant work culture with plenty of opportunities for
-                  growth and development.
+                  We invite you to be part of this transformative journey.
+                  Whether you are a woman lookingto break into the tech
+                  industry, an organization interested in partnering with us, or
+                  a donor who shares our vision, there is a place for you at
+                  Women in Technology and Innovation Africa. Together, we can
+                  create a future where women and technology thrive in harmony
+                  across Africa.
+                </Text>
+                <Text
+                  fontSize={{ base: "md", lg: "lg" }}
+                  color="gray.700"
+                  textAlign={{ base: "center", md: "left" }}
+                  maxW="2xl"
+                  mx="auto"
+                >
+                  Become a member of WITIA and take advantage of our programs
+                  and resources.
                 </Text>
               </Box>
 

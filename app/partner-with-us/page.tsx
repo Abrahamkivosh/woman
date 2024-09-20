@@ -10,6 +10,7 @@ import {
   Stack,
   Text,
 } from "@chakra-ui/react";
+import Link from "next/link";
 
 const PartnerWithUs = () => {
   return (
@@ -18,7 +19,6 @@ const PartnerWithUs = () => {
       <CommonHero
         title="Partner With Us"
         path="join-us/partner-with-us"
-        h="50vh"
         imgUrl="/images/woman02.jpg"
       />
 
@@ -30,19 +30,19 @@ const PartnerWithUs = () => {
             Why Partner With Us?
           </Heading>
           <Text fontSize="lg" color="gray.700" mb={8} maxW="3xl" mx="auto">
-            Partnering with us provides your organization with the opportunity
-            to make a lasting impact. Together, we can empower communities,
-            foster innovation, and create a better future. Let&apos;s
-            collaborate to achieve meaningful goals.
+            Partner with Women in Technology and Innovation Africa (WITIA) to
+            advance our shared goals. We collaborate with governmental
+            organizations, companies, educational institutions, and other NGOs
+            to create meaningful opportunities for women in technology.
           </Text>
           <Button
             size="lg"
-            bg="purple.600"
+            bg="brand.primary"
             color="white"
             _hover={{ bg: "purple.400" }}
             shadow="xl"
           >
-            Become a Partner
+            <Link href="/about-us">Become A Partiner</Link>
           </Button>
         </Box>
 
@@ -120,12 +120,12 @@ const PartnerWithUs = () => {
             </Text>
             <Button
               size="lg"
-              bg="purple.600"
+              bg="brand.primary"
               color="white"
               _hover={{ bg: "purple.400" }}
               shadow="xl"
             >
-              Partner With Us
+              <Link href="/contact-us">Partner With Us</Link>
             </Button>
           </Box>
         </Box>

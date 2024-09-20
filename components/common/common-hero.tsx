@@ -13,10 +13,10 @@ const CommonHero = ({ path, imgUrl, title, h }: Props) => {
   return (
     <Box position="relative">
       <Flex
-        minH={h || "85vh"}
+        minH={h || "55vh"}
         bgImage={imgUrl || "/images/woman01.jpg"}
         bgSize="cover"
-        bgColor="rgba(0, 0, 0, 0.5)"
+        bgColor="rgba(0, 0, 0, 0.1)"
         bgBlendMode="overlay"
         bgPos="center"
         bgRepeat="no-repeat"

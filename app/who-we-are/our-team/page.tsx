@@ -76,7 +76,6 @@ const OurTeamPage = () => {
       <CommonHero
         title="Our Team"
         path="our-team"
-        h="30vh"
         imgUrl="/images/woman02.jpg"
       />
 

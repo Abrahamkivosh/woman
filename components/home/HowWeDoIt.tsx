@@ -13,28 +13,16 @@ const HowWeDoIt = () => {
   // Updated HowWeDoIt array without the icon key
   const HowWeDoIt = [
     {
-      title: "Education and Training",
-      description: `
-      Offer accessible tech education and training for women and girls, integrate tech curriculums with institutions, and provide scholarships for STEM studies.
-    `,
+      title: "Skills Development",
+      description: `We are dedicated to providing a learning platformto nurture future innovators and tech leaders`,
     },
     {
-      title: "Empowerment and Employment",
-      description: `
-      Facilitate tech mentorships and internships, support women entrepreneurs with resources and funding, and promote women-led tech startups.
-    `,
+      title: "Mentorship Programs",
+      description: `Connect with experienced professionals and leaders in thetech industry who can guide and inspire you`,
     },
     {
-      title: "Advocacy and Awareness",
-      description: `
-      Build a strong network for women in tech, organize collaborative events, and create platforms for ongoing learning and networking.
-    `,
-    },
-    {
-      title: "Access to Technology",
-      description: `
-      Ensure tech access and internet for women in rural areas, distribute devices, and teach digital literacy and tech skills.
-    `,
+      title: "Community & Networking:",
+      description: `Join a vibrant community of like-minded women whoshare your passion for technology and innovation`,
     },
     {
       title: "Sustainability and Growth",
@@ -43,10 +31,8 @@ const HowWeDoIt = () => {
     `,
     },
     {
-      title: "Leadership and Representation",
-      description: `
-      Promote women into tech leadership roles, celebrate their achievements, and support their advancement in tech policy and governance.
-    `,
+      title: "Entrepreneurship Support",
+      description: `Access resources and mentorship to help you start, grow, and scale your tech business.`,
     },
   ];
 
@@ -90,7 +76,7 @@ const HowWeDoIt = () => {
           fontWeight="bold"
           data-aos="fade-up"
         >
-          How We Do It
+          What We Offer:
         </Text>
         <Text
           textAlign="center"

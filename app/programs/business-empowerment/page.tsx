@@ -1,5 +1,6 @@
 "use client";
 import { CommonHero } from "@/components/common";
+import { APP_NAME } from "@/config";
 import {
   Box,
   Divider,
@@ -8,31 +9,32 @@ import {
   Image,
   Link,
   Text,
+  Tooltip,
 } from "@chakra-ui/react";
 import AOS from "aos";
 import { useEffect } from "react";
 
 const sectionsData = [
   {
-    title: "Comprehensive Business Training",
+    title: "Mentorship",
     description:
-      "We provide tailored business training programs designed to teach women the skills needed to start and manage successful enterprises. This includes marketing, business planning, and financial management.",
-    image: "/images/business-training.jpg",
-    alt: "Business Training",
-  },
-  {
-    title: "Access to Networking and Mentorship",
-    description:
-      "Through our mentorship and networking programs, we connect women with successful entrepreneurs, industry leaders, and other resources that can help accelerate their business growth.",
+      "We connect aspiring and established women entrepreneurs with experienced mentors who provide guidance, advice, and support. Our mentorship program is designed to help wo",
     image: "/images/networking-mentorship.webp",
-    alt: "Networking and Mentorship",
+    alt: "Mentorship",
   },
   {
-    title: "Financial Support and Resources",
+    title: "Funding Opportunities",
     description:
-      "We help women secure funding through grants, microloans, and partnerships with financial institutions. We also provide guidance on how to manage and grow their businesses sustainably.",
+      "Access to capital is a significant barrier for many women entrepreneurs. WITIA helps bridge this gap by connecting women with funding opportunities, including grants, loans, and investment networks that are tailored to support women-led ventures.",
     image: "/images/financial-support.jpg",
-    alt: "Financial Support",
+    alt: "Funding Opportunities",
+  },
+  {
+    title: "Networking Platforms",
+    description:
+      "We create and facilitate networking opportunities that allow women entrepreneurs to connect with potential partners, investors, and clients. Our events, both online and offline, are designed to foster collaboration and build lasting relationships within the tech community.",
+    image: "/images/woman01.jpg",
+    alt: "Networking Platforms",
   },
 ];
 
@@ -105,7 +107,6 @@ const BusinessEmpowermentPage = () => {
       <CommonHero
         title="Business Empowerment"
         path="programs/business-empowerment"
-        h="30vh"
         imgUrl="/images/woman02.jpg"
       />
 
@@ -136,11 +137,27 @@ const BusinessEmpowermentPage = () => {
               maxW="3xl"
               mx="auto"
             >
-              Our Business Empowerment program focuses on equipping women with
-              the tools and resources they need to build successful and
-              sustainable businesses. From startup support to financial
-              education, we provide comprehensive services to foster innovation
-              and entrepreneurship.
+              Empowering women entrepreneurs is central to our mission at{" "}
+              <Tooltip
+                label={APP_NAME}
+                aria-label="A  tooltop for WIRIA"
+                fontSize={{ base: "lg", sm: "xl" }}
+                fontWeight="bold"
+                color="brand.primary"
+                bgColor="white"
+                hasArrow
+              >
+                <Text
+                  as="span"
+                  color="green.600"
+                  cursor="pointer"
+                  fontWeight="800"
+                >
+                  WITIA
+                </Text>
+              </Tooltip>
+              . We offer a range of business empowerment programs designed to
+              help women-led startups and businesses in tech succeed:
             </Text>
           </Box>
 

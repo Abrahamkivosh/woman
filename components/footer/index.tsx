@@ -57,12 +57,11 @@ const Footer = () => {
               data-aos-easing="ease-out-cubic"
               data-aos-duration="2000"
             >
-              Our mission is to create a thriving ecosystem that empowers and
-              supports women in Technology & Innovation across Africa. By
-              providing accessible education, fostering entrepreneurship,
-              advocating for gender equality, and building strong networks, we
-              aim to ensure that women are at the forefront of technological
-              advancements and innovation.
+              Our mission is to empower women across Africa by equipping them
+              with the skills, resources, and opportunities they need to
+              thriveinthe tech industry. We are committed to closing the gender
+              gap in technology, fostering innovation, and driving sustainable
+              development across the continent.
             </Text>
           </VStack>
         </GridItem>
