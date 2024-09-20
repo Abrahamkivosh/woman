@@ -1,9 +1,9 @@
-import { CMS_ASSETS_URL, DIRECTUS_ACCESS_TOKEN } from "@/config";
+import { CMS_ASSETS_URL, CMS_TOKEN } from "@/config";
 
 export function getHeaders() {
   return {
     "Content-Type": "application/json",
-    Authorization: `Bearer ${DIRECTUS_ACCESS_TOKEN}`,
+    Authorization: `Bearer ${CMS_TOKEN}`,
   };
 }
 
