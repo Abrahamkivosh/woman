@@ -56,13 +56,13 @@ const TopServiceCare = () => {
             What We Believe In
           </Text>
           <Text fontSize="lg" maxW="800px" data-aos="fade-right">
-            At WITIA, we recognize that women are key to unlocking Africa's full
-            potential. Through our comprehensive programs, mentorship
-            opportunities, and community support, we aim to inspire, educate,
-            and uplift women in tech. Whether you're a young woman exploring a
-            career in technology, an entrepreneur looking to innovate, or a
-            professional seeking to make a difference, WITIA is here to support
-            your journey.
+            At WITIA, we recognize that women are key to unlocking
+            Africa&lsquo;s full potential. Through our comprehensive programs,
+            mentorship opportunities, and community support, we aim to inspire,
+            educate, and uplift women in tech. Whether you&lsquo;re a young
+            woman exploring a career in technology, an entrepreneur looking to
+            innovate, or a professional seeking to make a difference, WITIA is
+            here to support your journey.
           </Text>
         </Stack>
         <Flex
