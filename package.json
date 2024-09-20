@@ -23,7 +23,7 @@
     "framer-motion": "^11.2.6",
     "isomorphic-dompurify": "^2.13.0",
     "jsx-email": "^1.12.1",
-    "next": "14.2.3",
+    "next": "14.2.10",
     "nextjs-toploader": "^1.6.12",
     "nodemailer": "^6.9.15",
     "nprogress": "^0.2.0",
